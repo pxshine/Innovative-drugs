@@ -4,119 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>关于 · 创新药自学指南</title>
-<link rel="stylesheet" href="/innovative-drug/assets/style.css">
-<style>
-/* ===== Follow Me section ===== */
-.follow-section {
-  margin: 60px 0 40px;
-  padding: 36px 40px;
-  background: var(--bg-card);
-  border: 1px solid var(--rule);
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 32px;
-}
-.follow-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 4px;
-  height: 100%;
-  background: var(--accent);
-}
-.follow-icon {
-  width: 64px;
-  height: 64px;
-  flex-shrink: 0;
-  border: 2px solid var(--accent);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--accent-soft);
-  position: relative;
-}
-.follow-icon svg {
-  width: 32px;
-  height: 32px;
-  fill: var(--accent);
-}
-.follow-content {
-  flex: 1;
-}
-.follow-label {
-  font-family: var(--mono);
-  font-size: 11px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 6px;
-}
-.follow-title {
-  font-family: var(--serif);
-  font-size: 22px;
-  font-weight: 700;
-  color: var(--ink);
-  margin-bottom: 8px;
-  line-height: 1.4;
-}
-.follow-desc {
-  color: var(--ink-soft);
-  font-size: 14px;
-  line-height: 1.7;
-  margin-bottom: 14px;
-}
-.follow-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-family: var(--mono);
-  font-size: 12px;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  color: var(--accent);
-  text-decoration: none;
-  border-bottom: 1px solid var(--accent);
-  padding-bottom: 2px;
-  transition: opacity 0.2s;
-}
-.follow-link:hover {
-  opacity: 0.7;
-}
-.follow-link::after {
-  content: '→';
-  transition: transform 0.2s;
-}
-.follow-link:hover::after {
-  transform: translateX(4px);
-}
-@media (max-width: 600px) {
-  .follow-section {
-    flex-direction: column;
-    text-align: center;
-    padding: 28px 24px;
-    gap: 20px;
-  }
-  .follow-section::before {
-    width: 100%;
-    height: 4px;
-  }
-}
-</style>
+<link rel="stylesheet" href="/assets/style.css">
 </head>
 <body>
 
-<div class="lab-breadcrumb">
-  <div class="nav-inner">
-    <a href="/" class="back-to-lab">← 返回创新药研究实验室</a>
-    <span class="breadcrumb-current">创新药自学指南</span>
-  </div>
-</div>
-
 <nav class="site-nav">
   <div class="nav-inner">
-    <a href="/innovative-drug/" class="nav-brand">
+    <a href="/" class="nav-brand">
       <div class="nav-mark">药</div>
       <div>
         <div class="nav-title">创新药自学指南</div>
@@ -125,11 +19,11 @@
     </a>
     <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">菜单</button>
     <div class="nav-links">
-      <a href="/innovative-drug/">首页</a>
-      <a href="/innovative-drug/days/">14 天课程</a>
-      <a href="/innovative-drug/quiz.html">互动测验</a>
-      <a href="/innovative-drug/illustration.html">知识图谱</a>
-      <a href="/innovative-drug/about.html" class="active">关于</a>
+      <a href="/">首页</a>
+      <a href="/days/">14 天课程</a>
+      <a href="/quiz.html">互动测验</a>
+      <a href="/illustration.html">知识图谱</a>
+      <a href="/about.html" class="active">关于</a>
     </div>
   </div>
 </nav>
@@ -192,23 +86,8 @@
       <p>创新药投资的本质是 <em>"为不确定性定价"</em>。理解风险、管理风险、在风险中寻找价值——这是这套指南想要传递的核心思维方式。</p>
     </blockquote>
 
-    <!-- ===== 关注我 ===== -->
-    <div class="follow-section">
-      <div class="follow-icon">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path d="M8.691 2C4.768 2 1.5 4.611 1.5 7.844c0 1.846 1.077 3.495 2.751 4.583L3.5 14.5l2.317-1.166c.842.222 1.62.342 2.526.342.246 0 .491-.012.731-.034a4.91 4.91 0 0 1-.196-1.378c0-2.873 2.799-5.205 6.249-5.205.124 0 .247.005.369.013C14.829 4.262 12.075 2 8.691 2zM6.5 6.5a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5zm4.5 0a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5zM22.5 12.264c0-2.696-2.692-4.889-6-4.889s-6 2.193-6 4.889c0 2.697 2.692 4.889 6 4.889.687 0 1.346-.097 1.96-.275L20.5 18l-.5-1.764c1.523-.91 2.5-2.281 2.5-3.972zM14.5 11.5a.625.625 0 1 1 0-1.25.625.625 0 0 1 0 1.25zm4 0a.625.625 0 1 1 0-1.25.625.625 0 0 1 0 1.25z"/>
-        </svg>
-      </div>
-      <div class="follow-content">
-        <div class="follow-label">FOLLOW ME · 关注作者</div>
-        <div class="follow-title">关注我的微信公众号</div>
-        <p class="follow-desc">获取创新药行业的最新动态、深度分析与投资洞察。本指南的更多延伸内容也会在公众号持续发布。</p>
-        <a href="https://mp.weixin.qq.com/s/59TN2LOr35DmQDlmEENohA" target="_blank" rel="noopener" class="follow-link">查看公众号文章</a>
-      </div>
-    </div>
-
-    <p style="text-align: center; margin-top: 40px;">
-      <a href="/innovative-drug/days/day-01.html" style="display: inline-block; padding: 14px 36px; background: var(--accent); color: var(--bg-paper); text-decoration: none; font-family: var(--mono); font-size: 13px; letter-spacing: 2px; text-transform: uppercase; border: 1px solid var(--accent);">从 Day 01 开始</a>
+    <p style="text-align: center; margin-top: 60px;">
+      <a href="/days/day-01.html" style="display: inline-block; padding: 14px 36px; background: var(--accent); color: var(--bg-paper); text-decoration: none; font-family: var(--mono); font-size: 13px; letter-spacing: 2px; text-transform: uppercase; border: 1px solid var(--accent);">从 Day 01 开始</a>
     </p>
   </article>
 </main>
@@ -221,16 +100,16 @@
     </div>
     <div class="footer-col">
       <h4>导航</h4>
-      <a href="/innovative-drug/">首页</a>
-      <a href="/innovative-drug/days/">14 天课程</a>
-      <a href="/innovative-drug/quiz.html">互动测验</a>
-      <a href="/innovative-drug/illustration.html">知识图谱</a>
+      <a href="/">首页</a>
+      <a href="/days/">14 天课程</a>
+      <a href="/quiz.html">互动测验</a>
+      <a href="/illustration.html">知识图谱</a>
     </div>
     <div class="footer-col">
       <h4>资源</h4>
       <a href="https://clinicaltrials.gov" target="_blank">ClinicalTrials.gov</a>
       <a href="https://www.fda.gov" target="_blank">FDA</a>
-      <a href="/innovative-drug/about.html">关于本站</a>
+      <a href="/about.html">关于本站</a>
     </div>
   </div>
   <div class="footer-bottom">
