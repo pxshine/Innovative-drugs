@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="创新药学习 Day 11：实战案例分析 - 拆解百济神州">
+<title>Day 11 · 实战案例分析 · 创新药自学指南</title>
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-brand">
+      <div class="nav-mark">药</div>
+      <div>
+        <div class="nav-title">创新药自学指南</div>
+        <div class="nav-sub">PHARMA · LEARNING</div>
+      </div>
+    </a>
+    <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">菜单</button>
+    <div class="nav-links">
+      <a href="/">首页</a>
+      <a href="/days/" class="active">14 天课程</a>
+      <a href="/quiz.html">互动测验</a>
+      <a href="/illustration.html">知识图谱</a>
+      <a href="/about.html">关于</a>
+    </div>
+  </div>
+</nav>
+
+
+<header class="page-header">
+  <div class="narrow">
+    <div class="page-eyebrow">DAY 11 · 拆解百济神州</div>
+    <h1 class="page-title">实战案例分析</h1>
+  </div>
+</header>
+
+<main class="narrow">
+  <article class="article">
+<blockquote>
+<p>🎯 <strong>今日目标</strong>：用前 10 天学到的知识，完整拆解一家真实的创新药企业——百济神州（BeiGene），建立从"看公司"到"做判断"的完整思路。</p>
+</blockquote>
+<hr />
+<h2>一、为什么选百济神州作为案例？</h2>
+<p>百济神州是中国创新药出海最成功的代表之一，它的故事覆盖了我们学过的几乎所有知识点：</p>
+<ul>
+<li>小分子药（泽布替尼）+ 大分子药（替雷利珠单抗）</li>
+<li>完整的 I/II/III 期临床推进历程</li>
+<li>FDA 和 NMPA 双重审批</li>
+<li>全球商业化布局</li>
+<li>与跨国药企的竞争（超越强生的伊布替尼）</li>
+<li>中国创新药"出海"的标杆案例</li>
+</ul>
+<hr />
+<h2>二、第一步：看公司概况（建立全局视野）</h2>
+<h3>2.1 基本画像</h3>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>信息</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>公司</td>
+<td>百济神州（BeiGene）</td>
+</tr>
+<tr>
+<td>上市地</td>
+<td>纳斯达克（BGNE）、港交所（06160）、上交所科创板（688235）</td>
+</tr>
+<tr>
+<td>创始人</td>
+<td>王晓东（科学家）、John Oyler（企业家）</td>
+</tr>
+<tr>
+<td>定位</td>
+<td>全球化创新药企业，聚焦肿瘤领域</td>
+</tr>
+<tr>
+<td>核心能力</td>
+<td>自主研发 + 全球临床 + 全球商业化</td>
+</tr>
+<tr>
+<td>员工</td>
+<td>约 10,000+</td>
+</tr>
+</tbody>
+</table>
+<h3>2.2 核心管线一览</h3>
+<table>
+<thead>
+<tr>
+<th>产品</th>
+<th>类型</th>
+<th>靶点</th>
+<th>阶段</th>
+<th>关键适应症</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>泽布替尼（百悦泽®）</strong></td>
+<td>小分子</td>
+<td>BTK</td>
+<td>已上市</td>
+<td>血液瘤（CLL/SLL、MCL 等）</td>
+</tr>
+<tr>
+<td><strong>替雷利珠单抗（百泽安®）</strong></td>
+<td>大分子抗体</td>
+<td>PD-1</td>
+<td>已上市</td>
+<td>多种实体瘤/血液瘤</td>
+</tr>
+<tr>
+<td><strong>奥雷巴替尼</strong></td>
+<td>小分子</td>
+<td>BCR-ABL T315I</td>
+<td>已上市</td>
+<td>CML（耐药型）</td>
+</tr>
+<tr>
+<td><strong>BGB-16673</strong></td>
+<td>小分子</td>
+<td>BTK CDAC（降解剂）</td>
+<td>临床中</td>
+<td>血液瘤</td>
+</tr>
+<tr>
+<td><strong>Sonrotoclax</strong></td>
+<td>小分子</td>
+<td>BCL-2</td>
+<td>临床中</td>
+<td>血液瘤</td>
+</tr>
+<tr>
+<td>其他</td>
+<td>—</td>
+<td>—</td>
+<td>多管线</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>三、第二步：拆解核心产品</h2>
+<h3>3.1 泽布替尼（Zanubrutinib / BRUKINSA）：全球化的标杆</h3>
+<p><strong>靶点：BTK（布鲁顿酪氨酸激酶）</strong></p>
+<p>BTK 是 B 细胞信号通路中的关键酶，在多种 B 细胞恶性肿瘤中过度活跃。抑制 BTK = 阻断 B 细胞肿瘤的生存信号。</p>
+<p><strong>竞争格局</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>药物</th>
+<th>公司</th>
+<th>代际</th>
+<th>选择性</th>
+<th>核心差异</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>伊布替尼（Imbruvica）</td>
+<td>强生/AbbVie</td>
+<td>第一代</td>
+<td>较低</td>
+<td>先发优势，但脱靶副作用多</td>
+</tr>
+<tr>
+<td><strong>泽布替尼（BRUKINSA）</strong></td>
+<td>百济神州</td>
+<td>第二代</td>
+<td>更高</td>
+<td>更好的选择性 → 更少心血管副作用</td>
+</tr>
+<tr>
+<td>阿可替尼（Calquence）</td>
+<td>阿斯利康</td>
+<td>第二代</td>
+<td>较高</td>
+<td>另一个竞品</td>
+</tr>
+</tbody>
+</table>
+<p><strong>关键临床试验：ALPINE</strong></p>
+<p>这是泽布替尼 vs 伊布替尼的<strong>头对头（Head-to-Head）III 期试验</strong>，在复发/难治性 CLL/SLL 患者中开展。</p>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>泽布替尼</th>
+<th>伊布替尼</th>
+<th>解读</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ORR</td>
+<td>80.4%</td>
+<td>72.9%</td>
+<td>泽布替尼更优</td>
+</tr>
+<tr>
+<td>PFS HR</td>
+<td>0.65 (p=0.0024)</td>
+<td>—</td>
+<td>风险降低 35%，高度显著</td>
+</tr>
+<tr>
+<td>房颤发生率</td>
+<td>2.5%</td>
+<td>10.1%</td>
+<td>泽布替尼心脏安全性好得多</td>
+</tr>
+</tbody>
+</table>
+<p><strong>投资解读</strong>：
+- 这是中国创新药<strong>首次在头对头 III 期试验中击败跨国药企的重磅药物</strong>
+- 泽布替尼"Best-in-class"地位确立
+- 获得全球 60+ 个市场批准
+- 2024 年全球销售额快速增长</p>
+<p><strong>商业化里程碑</strong>：</p>
+<pre><code>2019：FDA 加速审批（MCL 适应症）
+    ↓
+2023：ALPINE 试验完整数据发表 → 全球处方量加速增长
+    ↓
+2024：全球年销售额突破 20 亿美元 → 跻身全球重磅药行列
+    ↓
+目标：冲击全球年销售额 50 亿美元+
+</code></pre>
+<h3>3.2 替雷利珠单抗（Tislelizumab）：PD-1 赛道的参与者</h3>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>分析</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>定位</td>
+<td>与全球 PD-1 竞争，同时在中国与国产 PD-1 竞争</td>
+</tr>
+<tr>
+<td>差异化</td>
+<td>独特的 Fc 段设计（减少 ADCC 效应），理论上更少 T 细胞损耗</td>
+</tr>
+<tr>
+<td>中国市场</td>
+<td>多个适应症获批，进入医保</td>
+</tr>
+<tr>
+<td>全球化</td>
+<td>与诺华合作海外权益（后收回）</td>
+</tr>
+<tr>
+<td>挑战</td>
+<td>中国 PD-1 市场已严重内卷，全球化面临 Keytruda/Opdivo 的竞争</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>投资启示</strong>：替雷利珠单抗说明，即使产品质量好，如果赛道过于拥挤（中国 10+ 个 PD-1），差异化不足，也难以获得高溢价。</p>
+</blockquote>
+<hr />
+<h2>四、第三步：评估财务健康</h2>
+<h3>4.1 关键财务指标</h3>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>关注点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>收入增速</strong></td>
+<td>泽布替尼的全球放量速度</td>
+</tr>
+<tr>
+<td><strong>研发费用占比</strong></td>
+<td>Biotech 阶段研发费用通常占收入 50%+</td>
+</tr>
+<tr>
+<td><strong>盈亏平衡进度</strong></td>
+<td>何时能实现盈利？Cash Runway 是否安全？</td>
+</tr>
+<tr>
+<td><strong>现金储备</strong></td>
+<td>账上现金能支撑多久？</td>
+</tr>
+</tbody>
+</table>
+<h3>4.2 百济神州的财务演进</h3>
+<pre><code>早期（2010-2018）：纯烧钱，无产品收入
+    ↓
+中期（2019-2022）：产品开始上市，但研发投入巨大，持续亏损
+    ↓
+转折（2023-2024）：泽布替尼放量加速，收入快速增长
+    ↓
+目标：收入覆盖运营开支，走向盈利
+</code></pre>
+<blockquote>
+<p><strong>投资启示</strong>：Biotech 公司的亏损是"预期中的"，关键是看亏损是否在产生"管线资产"的价值。一旦核心产品放量，从亏损到盈利的转变可以非常快——这也是股价的重要催化剂。</p>
+</blockquote>
+<hr />
+<h2>五、第四步：分析竞争格局与护城河</h2>
+<h3>5.1 百济的护城河</h3>
+<table>
+<thead>
+<tr>
+<th>护城河</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>临床数据壁垒</strong></td>
+<td>ALPINE 头对头击败伊布替尼，数据说话</td>
+</tr>
+<tr>
+<td><strong>全球化能力</strong></td>
+<td>在美国、欧洲有自建销售团队（中国 Biotech 中罕见）</td>
+</tr>
+<tr>
+<td><strong>管线深度</strong></td>
+<td>BTK 降解剂、BCL-2 抑制剂构成"血液瘤平台"</td>
+</tr>
+<tr>
+<td><strong>品牌与信任</strong></td>
+<td>在血液瘤领域建立了学术影响力和医生信任</td>
+</tr>
+</tbody>
+</table>
+<h3>5.2 风险</h3>
+<table>
+<thead>
+<tr>
+<th>风险</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>竞争加剧</td>
+<td>下一代 BTK 抑制剂（非共价结合型）可能威胁</td>
+</tr>
+<tr>
+<td>PD-1 内卷</td>
+<td>替雷利珠单抗面临中国市场价格压力</td>
+</tr>
+<tr>
+<td>盈利时间表</td>
+<td>如果放量不及预期，亏损持续的时间可能超出市场耐心</td>
+</tr>
+<tr>
+<td>地缘政治</td>
+<td>美中关系可能影响其全球化布局</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>六、第五步：搭建催化剂日历（模板）</h2>
+<table>
+<thead>
+<tr>
+<th>时间段</th>
+<th>预期事件</th>
+<th>影响等级</th>
+<th>关注重点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>近期</td>
+<td>泽布替尼季度销售数据</td>
+<td>中</td>
+<td>全球放量趋势</td>
+</tr>
+<tr>
+<td>中期</td>
+<td>BCL-2 抑制剂临床数据</td>
+<td>高</td>
+<td>能否成为下一个重磅品种？</td>
+</tr>
+<tr>
+<td>中期</td>
+<td>BTK 降解剂早期数据</td>
+<td>高</td>
+<td>下一代 BTK 的潜力</td>
+</tr>
+<tr>
+<td>长期</td>
+<td>盈亏平衡时间点</td>
+<td>高</td>
+<td>从"烧钱"到"赚钱"的转变</td>
+</tr>
+<tr>
+<td>持续</td>
+<td>竞品数据和格局变化</td>
+<td>中</td>
+<td>非共价 BTK 竞品的威胁</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>七、第六步：做出投资判断（思维框架）</h2>
+<h3>7.1 牛市逻辑（看好的理由）</h3>
+<ol>
+<li>泽布替尼全球放量加速，有望成为 50 亿美元+ 产品</li>
+<li>管线中有多个潜在重磅品种（BCL-2、BTK 降解剂）</li>
+<li>中国 Biotech 中全球化能力最强</li>
+<li>即将进入盈利拐点</li>
+</ol>
+<h3>7.2 熊市逻辑（担忧的理由）</h3>
+<ol>
+<li>估值已充分反映泽布替尼的成功预期</li>
+<li>下一代 BTK 竞争威胁</li>
+<li>PD-1 业务面临中国市场内卷</li>
+<li>盈利时间表存在不确定性</li>
+</ol>
+<h3>7.3 判断模板</h3>
+<blockquote>
+<p>不要追求"绝对正确"的结论。好的投资判断是在<strong>充分理解风险和回报</strong>的基础上，做出<strong>与自己风险承受能力匹配</strong>的决策。</p>
+</blockquote>
+<hr />
+<h2>八、你自己的分析练习</h2>
+<p>现在，请尝试用同样的框架分析另一家创新药企业。推荐选择以下之一：</p>
+<table>
+<thead>
+<tr>
+<th>公司</th>
+<th>核心看点</th>
+<th>适合练习的原因</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>信达生物</strong></td>
+<td>PD-1 + GLP-1（玛仕度肽）</td>
+<td>从肿瘤到代谢病的赛道拓展</td>
+</tr>
+<tr>
+<td><strong>恒瑞医药</strong></td>
+<td>中国创新药龙头的转型</td>
+<td>从仿制药到创新药的典型案例</td>
+</tr>
+<tr>
+<td><strong>诺和诺德</strong></td>
+<td>GLP-1 赛道龙头</td>
+<td>全球超级赛道的定价权</td>
+</tr>
+<tr>
+<td><strong>礼来</strong></td>
+<td>GLP-1 + 阿尔茨海默</td>
+<td>多赛道催化剂</td>
+</tr>
+</tbody>
+</table>
+<p><strong>分析框架</strong>：
+1. 公司概况 + 核心管线
+2. 拆解核心产品的临床数据和竞争格局
+3. 评估财务健康（收入、现金、Cash Runway）
+4. 识别护城河和风险
+5. 搭建催化剂日历
+6. 形成牛市/熊市双向判断</p>
+<hr />
+<h2>九、前 11 天知识串联</h2>
+<p>到今天为止，你已经掌握了一个完整的知识体系：</p>
+<pre><code>Day 1-2：基础认知（药物本质、小分子 vs 大分子）
+    ↓
+Day 3-5：研发流程（靶点 → 临床前 → I/II/III 期 → 审批上市）
+    ↓
+Day 6-8：前沿赛道（PD-1、ADC、GLP-1、CGT、AI 制药）
+    ↓
+Day 9-10：投资工具（临床数据解读、rNPV 估值、投资框架）
+    ↓
+Day 11：实战应用（企业拆解 + 独立分析练习）
+</code></pre>
+<p>如果你能独立完成一家企业的分析，说明你已经<strong>真正建立了创新药的知识框架</strong>。接下来 Day 12-14 可以用于复习巩固、补充阅读和深入感兴趣的细分领域。</p>
+<hr />
+<h2>📝 今日自检</h2>
+<ol>
+<li>分析一家创新药企业，你应该从哪几个维度入手？</li>
+<li>泽布替尼为什么被认为是中国创新药出海的标杆？</li>
+<li>头对头临床试验（Head-to-Head）为什么对投资判断特别重要？</li>
+<li>Biotech 从"烧钱"到"盈利"的转折点是什么？</li>
+<li>选择一家你感兴趣的创新药企业，尝试搭建一个简易的催化剂日历。</li>
+</ol>
+<hr />
+<blockquote>
+<p>🎉 <strong>恭喜你完成了 11 天的核心学习内容！</strong> </p>
+<p>你已经从零基础建立了创新药的完整知识框架，涵盖了科学原理、研发流程、前沿赛道和投资方法论。</p>
+<p><strong>接下来的建议</strong>：
+- Day 12-13：用推荐资源补充阅读，深入你最感兴趣的 1-2 个赛道
+- Day 14：完成学习指南中的 5 道自测题，并尝试独立写一份简短的企业分析
+- 之后：保持日常阅读行业资讯（医药魔方、药明康德等公众号），持续积累</p>
+</blockquote>
+  </article>
+  
+  <nav class="day-nav">
+    
+      <a href="day-10.html" class="prev">
+        <div class="nav-label">← Day 10</div>
+        <div class="nav-title-link">估值方法与投资框架</div>
+      </a>
+    
+      <a href="day-12.html" class="next">
+        <div class="nav-label">Day 12 →</div>
+        <div class="nav-title-link">新兴赛道与最新格局</div>
+      </a>
+  </nav>
+</main>
+
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">创新药自学指南</div>
+      <div class="footer-tagline">为零基础投资者设计的 14 天学习路径</div>
+    </div>
+    <div class="footer-col">
+      <h4>导航</h4>
+      <a href="/">首页</a>
+      <a href="/days/">14 天课程</a>
+      <a href="/quiz.html">互动测验</a>
+      <a href="/illustration.html">知识图谱</a>
+    </div>
+    <div class="footer-col">
+      <h4>资源</h4>
+      <a href="https://clinicaltrials.gov" target="_blank">ClinicalTrials.gov</a>
+      <a href="https://www.fda.gov" target="_blank">FDA</a>
+      <a href="/about.html">关于本站</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    INNOVATIVE DRUG LEARNING GUIDE · 14 天学习路径 · 投资视角
+  </div>
+</footer>
+
+</body>
+</html>

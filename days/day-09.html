@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="创新药学习 Day 09：如何看懂临床数据 - 投资人的眼睛">
+<title>Day 09 · 如何看懂临床数据 · 创新药自学指南</title>
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-brand">
+      <div class="nav-mark">药</div>
+      <div>
+        <div class="nav-title">创新药自学指南</div>
+        <div class="nav-sub">PHARMA · LEARNING</div>
+      </div>
+    </a>
+    <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">菜单</button>
+    <div class="nav-links">
+      <a href="/">首页</a>
+      <a href="/days/" class="active">14 天课程</a>
+      <a href="/quiz.html">互动测验</a>
+      <a href="/illustration.html">知识图谱</a>
+      <a href="/about.html">关于</a>
+    </div>
+  </div>
+</nav>
+
+
+<header class="page-header">
+  <div class="narrow">
+    <div class="page-eyebrow">DAY 09 · 投资人的眼睛</div>
+    <h1 class="page-title">如何看懂临床数据</h1>
+  </div>
+</header>
+
+<main class="narrow">
+  <article class="article">
+<blockquote>
+<p>🎯 <strong>今日目标</strong>：掌握投资人必须理解的核心临床指标，学会快速判断一份临床数据是"好"还是"不好"。</p>
+</blockquote>
+<hr />
+<h2>一、为什么投资人必须看懂临床数据？</h2>
+<p>临床数据读出（Data Readout）是创新药股价波动的<strong>最大驱动因素</strong>。一份好数据可以让股价翻倍，一份差数据可以让股价腰斩。</p>
+<p>你不需要成为统计学家，但必须掌握以下核心指标的含义和判断标准。</p>
+<hr />
+<h2>二、肿瘤药的核心疗效指标</h2>
+<h3>2.1 ORR（Objective Response Rate，客观缓解率）</h3>
+<p><strong>定义</strong>：肿瘤缩小达到预设标准（通常缩小≥30%）的患者占比。</p>
+<table>
+<thead>
+<tr>
+<th>评估类型</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CR（完全缓解）</td>
+<td>肿瘤完全消失</td>
+</tr>
+<tr>
+<td>PR（部分缓解）</td>
+<td>肿瘤缩小≥30%</td>
+</tr>
+<tr>
+<td>SD（疾病稳定）</td>
+<td>未达 PR 但也未恶化</td>
+</tr>
+<tr>
+<td>PD（疾病进展）</td>
+<td>肿瘤增大≥20% 或出现新病灶</td>
+</tr>
+</tbody>
+</table>
+<p><strong>ORR = CR + PR 的比例</strong></p>
+<p><strong>判断标准</strong>（高度依赖瘤种和线数）：</p>
+<table>
+<thead>
+<tr>
+<th>情况</th>
+<th>通常解读</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>单药 ORR &gt; 40%（晚线实体瘤）</td>
+<td>非常好</td>
+</tr>
+<tr>
+<td>单药 ORR 20-40%</td>
+<td>有潜力</td>
+</tr>
+<tr>
+<td>单药 ORR &lt; 15%</td>
+<td>通常不够</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>注意</strong>：ORR 是"即时快照"，只反映肿瘤是否缩小，不反映患者能活多久。高 ORR 不一定等于好的生存数据。</p>
+</blockquote>
+<h3>2.2 DOR（Duration of Response，缓解持续时间）</h3>
+<p><strong>定义</strong>：从首次确认缓解到疾病再次进展的时间。</p>
+<ul>
+<li>DOR 长 = 药物效果持久</li>
+<li>DOR 短 = 虽然肿瘤缩小了，但很快又长回来</li>
+<li>DOR 与 ORR 配合看：高 ORR + 长 DOR = 优秀数据</li>
+</ul>
+<h3>2.3 PFS（Progression-Free Survival，无进展生存期）</h3>
+<p><strong>定义</strong>：从随机化/开始治疗到疾病进展或死亡的中位时间。</p>
+<p><strong>为什么重要</strong>：
+- PFS 是很多 III 期试验的<strong>主要终点</strong>
+- 比 ORR 更能反映药物的整体获益
+- 数据成熟较快（不需要等到患者去世）
+- FDA 经常接受 PFS 作为<strong>替代终点</strong>来加速审批</p>
+<p><strong>判断标准</strong>（需要与对照组比较）：</p>
+<table>
+<thead>
+<tr>
+<th>结果</th>
+<th>通常解读</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PFS HR &lt; 0.5（新药组风险减半）</td>
+<td>非常强</td>
+</tr>
+<tr>
+<td>PFS HR 0.5-0.7</td>
+<td>良好</td>
+</tr>
+<tr>
+<td>PFS HR 0.7-0.8</td>
+<td>有意义但不突出</td>
+</tr>
+<tr>
+<td>PFS HR &gt; 0.8</td>
+<td>获益有限</td>
+</tr>
+</tbody>
+</table>
+<h3>2.4 OS（Overall Survival，总生存期）</h3>
+<p><strong>定义</strong>：从随机化/开始治疗到死亡的中位时间。</p>
+<p><strong>这是金标准</strong>：
+- OS 直接衡量"患者能多活多久"
+- 不可能造假或被混杂因素干扰
+- 但数据成熟需要很长时间（需要足够多的死亡事件）
+- 后续治疗的交叉用药可能"污染"OS 数据</p>
+<h3>2.5 指标之间的关系</h3>
+<pre><code>临床意义递增 →
+
+ORR（缩小了吗？）→ DOR（持续多久？）→ PFS（多久不恶化？）→ OS（多活多久？）
+
+← 数据成熟速度递减
+</code></pre>
+<hr />
+<h2>三、统计学基础：投资人必会的三个概念</h2>
+<h3>3.1 p 值（p-value）</h3>
+<p><strong>含义</strong>：观察到的结果是由"纯粹随机"导致的概率。</p>
+<table>
+<thead>
+<tr>
+<th>p 值</th>
+<th>解读</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>p &lt; 0.001</td>
+<td>结果极度显著，几乎不可能是巧合</td>
+</tr>
+<tr>
+<td>p &lt; 0.01</td>
+<td>结果高度显著</td>
+</tr>
+<tr>
+<td>p &lt; 0.05</td>
+<td>达到统计学显著性的常用门槛</td>
+</tr>
+<tr>
+<td>p ≥ 0.05</td>
+<td>未达统计学显著性（试验"失败"）</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>关键</strong>：p &lt; 0.05 是"及格线"，但仅仅统计显著还不够——还要看临床意义。</p>
+</blockquote>
+<h3>3.2 HR（Hazard Ratio，风险比）</h3>
+<p><strong>含义</strong>：试验组相对于对照组的"风险"比值。</p>
+<table>
+<thead>
+<tr>
+<th>HR 值</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HR = 1.0</td>
+<td>两组没有差别</td>
+</tr>
+<tr>
+<td>HR = 0.7</td>
+<td>试验组的风险（进展/死亡）降低了 30%</td>
+</tr>
+<tr>
+<td>HR = 0.5</td>
+<td>试验组的风险降低了 50%（非常好）</td>
+</tr>
+<tr>
+<td>HR &gt; 1.0</td>
+<td>试验组反而更差（药物有害）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>HR 的 95% 置信区间（CI）</strong>：
+- 如果 CI 的上限 &lt; 1.0 → 统计显著
+- 如果 CI 跨越 1.0 → 不显著</p>
+<p>例如：<strong>HR = 0.65 (95% CI: 0.50-0.85, p = 0.001)</strong> → 优秀结果（风险降 35%，统计显著）</p>
+<h3>3.3 置信区间（Confidence Interval, CI）</h3>
+<p><strong>含义</strong>：如果重复试验 100 次，有 95 次结果会落在这个范围内。</p>
+<ul>
+<li>CI 越窄 = 结果越精确</li>
+<li>CI 越宽 = 结果不确定性越大</li>
+<li>关注 CI 的<strong>上限</strong>：如果 HR 的 95% CI 上限不超过 1，结果可信</li>
+</ul>
+<hr />
+<h2>四、快速判断模板：拿到一份数据怎么看？</h2>
+<h3>第1步：看主要终点是否达到</h3>
+<ul>
+<li>"Primary endpoint met" = 好消息</li>
+<li>"Did not meet primary endpoint" = 坏消息（通常股价暴跌）</li>
+</ul>
+<h3>第2步：看核心数据的绝对值</h3>
+<ul>
+<li>PFS 中位数是多少个月？vs 对照组多少个月？</li>
+<li>ORR 是多少？有多少 CR？</li>
+<li>OS 数据是否成熟？</li>
+</ul>
+<h3>第3步：看统计学指标</h3>
+<ul>
+<li>HR 是多少？&lt; 0.7 是好结果</li>
+<li>p 值是否 &lt; 0.05？</li>
+<li>95% CI 是否排除了 1？</li>
+</ul>
+<h3>第4步：看安全性</h3>
+<ul>
+<li>3 级以上不良反应发生率？</li>
+<li>有没有导致停药的严重安全信号？</li>
+<li>特别关注特殊风险（如 ADC 的 ILD、免疫治疗的 irAE）</li>
+</ul>
+<h3>第5步：与竞品比较</h3>
+<ul>
+<li>即使没有头对头试验，也要做<strong>跨试验间接比较</strong></li>
+<li>注意入组人群、对照组、终点定义的差异</li>
+</ul>
+<h3>实战示例</h3>
+<p>假设你看到这样一份数据公告：</p>
+<blockquote>
+<p>"XX 药物的 III 期临床试验达到主要终点。与标准化疗相比，XX 药物显著改善了 PFS（中位 PFS：12.3 个月 vs 7.8 个月；HR = 0.58, 95% CI: 0.45-0.74, p &lt; 0.0001）。ORR 为 52% vs 28%。3 级以上不良反应发生率 35% vs 42%。OS 数据尚未成熟。"</p>
+</blockquote>
+<p><strong>快速解读</strong>：
+- ✅ 主要终点达到
+- ✅ PFS 改善明显（12.3 vs 7.8 月，多了近 5 个月）
+- ✅ HR = 0.58（风险降低 42%，非常好）
+- ✅ p &lt; 0.0001（统计学极度显著）
+- ✅ ORR 也支持（52% vs 28%）
+- ✅ 安全性可接受（不良反应率反而更低）
+- ⏳ OS 待观察</p>
+<p><strong>结论</strong>：这是一份非常积极的数据，大概率支持获批。</p>
+<hr />
+<h2>五、不同疾病领域的常用终点</h2>
+<table>
+<thead>
+<tr>
+<th>疾病领域</th>
+<th>常用终点</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>肿瘤（实体瘤）</strong></td>
+<td>PFS, OS, ORR</td>
+<td>PFS 常用于加速审批</td>
+</tr>
+<tr>
+<td><strong>血液瘤</strong></td>
+<td>ORR, CR 率, MRD 阴性率</td>
+<td>MRD（微小残留病灶）是新趋势</td>
+</tr>
+<tr>
+<td><strong>自身免疫病</strong></td>
+<td>ACR20/50/70（关节炎）、PASI 75/90（银屑病）</td>
+<td>衡量症状改善比例</td>
+</tr>
+<tr>
+<td><strong>心血管</strong></td>
+<td>MACE（主要不良心血管事件）</td>
+<td>复合终点</td>
+</tr>
+<tr>
+<td><strong>NASH/MASH</strong></td>
+<td>肝纤维化改善、NASH 消退</td>
+<td>需要活检确认</td>
+</tr>
+<tr>
+<td><strong>阿尔茨海默</strong></td>
+<td>CDR-SB（认知功能评分变化）</td>
+<td>终点争议较大</td>
+</tr>
+<tr>
+<td><strong>减肥</strong></td>
+<td>体重减轻百分比、≥5% 减重的患者比例</td>
+<td>GLP-1 领域核心指标</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>六、常见的"数据陷阱"</h2>
+<table>
+<thead>
+<tr>
+<th>陷阱</th>
+<th>说明</th>
+<th>如何识别</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>cherry-picking（摘樱桃）</strong></td>
+<td>只展示好看的亚组数据</td>
+<td>看主要终点而非亚组</td>
+</tr>
+<tr>
+<td><strong>历史对照 vs 随机对照</strong></td>
+<td>单臂试验与历史数据比，可靠性低</td>
+<td>随机对照是金标准</td>
+</tr>
+<tr>
+<td><strong>统计显著 ≠ 临床意义</strong></td>
+<td>p &lt; 0.05 但实际差异很小</td>
+<td>看绝对值差异</td>
+</tr>
+<tr>
+<td><strong>II 期膨胀效应</strong></td>
+<td>II 期看起来很好但 III 期失败</td>
+<td>II 期数据打折看</td>
+</tr>
+<tr>
+<td><strong>中位数的误导</strong></td>
+<td>中位 PFS 12 月不代表所有人受益 12 月</td>
+<td>看 KM 曲线的形态</td>
+</tr>
+<tr>
+<td><strong>交叉用药污染 OS</strong></td>
+<td>对照组患者后续使用了试验药</td>
+<td>OS 数据可能被低估</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>七、投资视角小结</h2>
+<blockquote>
+<p>💡 <strong>投资启示</strong></p>
+</blockquote>
+<ol>
+<li><strong>学会看 HR 和 p 值是最基本的技能</strong>：HR &lt; 0.7 + p &lt; 0.05 = 好数据。</li>
+<li><strong>数据读出前后是最大的股价波动窗口</strong>：可以提前布局（承担二元风险），也可以等数据出来后再判断。</li>
+<li><strong>不要被单一指标迷惑</strong>：ORR 高不等于 OS 好；要综合看。</li>
+<li><strong>跨试验比较需要谨慎</strong>：不同试验的入组标准、对照组、终点定义可能不同。</li>
+<li><strong>关注 KM 生存曲线的形态</strong>：早期分离且持续分离 = 持久获益；曲线后期交叉 = 获益可能不持久。</li>
+</ol>
+<hr />
+<h2>📝 今日自检</h2>
+<ol>
+<li>ORR、PFS、OS 分别衡量什么？哪个是"金标准"？</li>
+<li>HR = 0.6 意味着什么？</li>
+<li>p &lt; 0.05 意味着什么？为什么"统计显著"不一定有"临床意义"？</li>
+<li>拿到一份临床数据公告，你应该按什么顺序快速判断？</li>
+<li>列举两个常见的"数据陷阱"。</li>
+</ol>
+<blockquote>
+<p>✅ 完成自检后进入 Day 10：创新药的估值方法与投资框架。</p>
+</blockquote>
+  </article>
+  
+  <nav class="day-nav">
+    
+      <a href="day-08.html" class="prev">
+        <div class="nav-label">← Day 08</div>
+        <div class="nav-title-link">GLP-1 / 基因治疗 / AI 制药</div>
+      </a>
+    
+      <a href="day-10.html" class="next">
+        <div class="nav-label">Day 10 →</div>
+        <div class="nav-title-link">估值方法与投资框架</div>
+      </a>
+  </nav>
+</main>
+
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">创新药自学指南</div>
+      <div class="footer-tagline">为零基础投资者设计的 14 天学习路径</div>
+    </div>
+    <div class="footer-col">
+      <h4>导航</h4>
+      <a href="/">首页</a>
+      <a href="/days/">14 天课程</a>
+      <a href="/quiz.html">互动测验</a>
+      <a href="/illustration.html">知识图谱</a>
+    </div>
+    <div class="footer-col">
+      <h4>资源</h4>
+      <a href="https://clinicaltrials.gov" target="_blank">ClinicalTrials.gov</a>
+      <a href="https://www.fda.gov" target="_blank">FDA</a>
+      <a href="/about.html">关于本站</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    INNOVATIVE DRUG LEARNING GUIDE · 14 天学习路径 · 投资视角
+  </div>
+</footer>
+
+</body>
+</html>

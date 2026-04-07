@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>14 天课程 · 创新药自学指南</title>
+<link rel="stylesheet" href="/assets/style.css">
+<style>
+.phase-section {
+  margin-bottom: 80px;
+}
+.phase-header {
+  display: flex;
+  align-items: baseline;
+  gap: 24px;
+  margin-bottom: 32px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--rule);
+}
+.phase-num {
+  font-family: var(--serif);
+  font-weight: 900;
+  font-size: 56px;
+  color: var(--accent);
+  line-height: 1;
+}
+.phase-info h2 {
+  font-family: var(--serif);
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.phase-info p {
+  color: var(--ink-mute);
+  font-style: italic;
+}
+.phase-days {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+.day-item {
+  background: var(--bg-card);
+  border: 1px solid var(--rule);
+  padding: 24px 26px;
+  text-decoration: none;
+  color: var(--ink);
+  transition: all 0.3s;
+  position: relative;
+}
+.day-item:hover {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  transform: translateY(-2px);
+}
+.day-item .num {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+.day-item h3 {
+  font-family: var(--serif);
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+.day-item .sub {
+  font-size: 13px;
+  color: var(--ink-mute);
+  font-style: italic;
+}
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-brand">
+      <div class="nav-mark">药</div>
+      <div>
+        <div class="nav-title">创新药自学指南</div>
+        <div class="nav-sub">PHARMA · LEARNING</div>
+      </div>
+    </a>
+    <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">菜单</button>
+    <div class="nav-links">
+      <a href="/">首页</a>
+      <a href="/days/" class="active">14 天课程</a>
+      <a href="/quiz.html">互动测验</a>
+      <a href="/illustration.html">知识图谱</a>
+      <a href="/about.html">关于</a>
+    </div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="narrow">
+    <div class="page-eyebrow">14 DAYS · LEARNING PATH</div>
+    <h1 class="page-title">14 天<em>学习路径</em></h1>
+    <p class="page-subtitle">五个阶段，循序渐进，从底层认知到投资实战</p>
+  </div>
+</header>
+
+<main class="container" style="padding-bottom: 80px;">
+
+  <!-- Phase 1 -->
+  <div class="phase-section">
+    <div class="phase-header">
+      <div class="phase-num">01</div>
+      <div class="phase-info">
+        <h2>建立底层认知</h2>
+        <p>Day 1-2 · 理解药物的本质与药物分类</p>
+      </div>
+    </div>
+    <div class="phase-days">
+      <a href="day-01.html" class="day-item">
+        <div class="num">DAY 01</div>
+        <h3>什么是药？什么是创新药？</h3>
+        <div class="sub">理解药物本质、靶点概念、创新药 vs 仿制药</div>
+      </a>
+      <a href="day-02.html" class="day-item">
+        <div class="num">DAY 02</div>
+        <h3>小分子 vs 大分子药物</h3>
+        <div class="sub">两大药物阵营的根本差异</div>
+      </a>
+    </div>
+  </div>
+
+  <!-- Phase 2 -->
+  <div class="phase-section">
+    <div class="phase-header">
+      <div class="phase-num">02</div>
+      <div class="phase-info">
+        <h2>掌握核心流程</h2>
+        <p>Day 3-5 · 从靶点发现到上市的完整旅程</p>
+      </div>
+    </div>
+    <div class="phase-days">
+      <a href="day-03.html" class="day-item">
+        <div class="num">DAY 03</div>
+        <h3>靶点发现与临床前研究</h3>
+        <div class="sub">研发的起点 · IND 申报</div>
+      </a>
+      <a href="day-04.html" class="day-item">
+        <div class="num">DAY 04</div>
+        <h3>临床试验三阶段</h3>
+        <div class="sub">I/II/III 期 · 统计学基础</div>
+      </a>
+      <a href="day-05.html" class="day-item">
+        <div class="num">DAY 05</div>
+        <h3>注册审批与商业化</h3>
+        <div class="sub">PDUFA Date · 医保谈判 · 集采</div>
+      </a>
+    </div>
+  </div>
+
+  <!-- Phase 3 -->
+  <div class="phase-section">
+    <div class="phase-header">
+      <div class="phase-num">03</div>
+      <div class="phase-info">
+        <h2>前沿赛道深入</h2>
+        <p>Day 6-8 · 当下最热门的创新药方向</p>
+      </div>
+    </div>
+    <div class="phase-days">
+      <a href="day-06.html" class="day-item">
+        <div class="num">DAY 06</div>
+        <h3>肿瘤免疫治疗与 PD-1</h3>
+        <div class="sub">免疫革命 · 中国 PD-1 内卷启示</div>
+      </a>
+      <a href="day-07.html" class="day-item">
+        <div class="num">DAY 07</div>
+        <h3>ADC 抗体偶联药物</h3>
+        <div class="sub">生物导弹 · BD 交易热潮</div>
+      </a>
+      <a href="day-08.html" class="day-item">
+        <div class="num">DAY 08</div>
+        <h3>GLP-1 / 基因治疗 / AI 制药</h3>
+        <div class="sub">超级减重赛道 · CGT · AI 现实</div>
+      </a>
+    </div>
+  </div>
+
+  <!-- Phase 4 -->
+  <div class="phase-section">
+    <div class="phase-header">
+      <div class="phase-num">04</div>
+      <div class="phase-info">
+        <h2>投资工具与实战</h2>
+        <p>Day 9-11 · 用投资人的眼睛看创新药</p>
+      </div>
+    </div>
+    <div class="phase-days">
+      <a href="day-09.html" class="day-item">
+        <div class="num">DAY 09</div>
+        <h3>如何看懂临床数据</h3>
+        <div class="sub">ORR · PFS · OS · HR · p 值</div>
+      </a>
+      <a href="day-10.html" class="day-item">
+        <div class="num">DAY 10</div>
+        <h3>估值方法与投资框架</h3>
+        <div class="sub">rNPV · 催化剂日历 · Cash Runway</div>
+      </a>
+      <a href="day-11.html" class="day-item">
+        <div class="num">DAY 11</div>
+        <h3>实战案例分析</h3>
+        <div class="sub">完整拆解百济神州与泽布替尼</div>
+      </a>
+    </div>
+  </div>
+
+  <!-- Phase 5 -->
+  <div class="phase-section">
+    <div class="phase-header">
+      <div class="phase-num">05</div>
+      <div class="phase-info">
+        <h2>巩固与测验</h2>
+        <p>Day 12-14 · 复习、最新格局、综合测验</p>
+      </div>
+    </div>
+    <div class="phase-days">
+      <a href="day-12.html" class="day-item">
+        <div class="num">DAY 12</div>
+        <h3>新兴赛道与最新格局</h3>
+        <div class="sub">小核酸 · 双抗 · 2025-2026 行业更新</div>
+      </a>
+      <a href="day-13.html" class="day-item">
+        <div class="num">DAY 13</div>
+        <h3>知识综合复习与易错点</h3>
+        <div class="sub">横向对比 · 误区纠正 · 全流程串联</div>
+      </a>
+      <a href="day-14.html" class="day-item">
+        <div class="num">DAY 14</div>
+        <h3>最终综合测验</h3>
+        <div class="sub">30 道综合题 · 持续学习指南</div>
+      </a>
+    </div>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">创新药自学指南</div>
+      <div class="footer-tagline">为零基础投资者设计的 14 天学习路径</div>
+    </div>
+    <div class="footer-col">
+      <h4>导航</h4>
+      <a href="/">首页</a>
+      <a href="/days/">14 天课程</a>
+      <a href="/quiz.html">互动测验</a>
+      <a href="/illustration.html">知识图谱</a>
+    </div>
+    <div class="footer-col">
+      <h4>资源</h4>
+      <a href="https://clinicaltrials.gov" target="_blank">ClinicalTrials.gov</a>
+      <a href="https://www.fda.gov" target="_blank">FDA</a>
+      <a href="/about.html">关于本站</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    INNOVATIVE DRUG LEARNING GUIDE · 14 天学习路径 · 投资视角
+  </div>
+</footer>
+
+</body>
+</html>

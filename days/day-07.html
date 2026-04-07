@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="创新药学习 Day 07：ADC 抗体偶联药物 - 生物导弹">
+<title>Day 07 · ADC 抗体偶联药物 · 创新药自学指南</title>
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-brand">
+      <div class="nav-mark">药</div>
+      <div>
+        <div class="nav-title">创新药自学指南</div>
+        <div class="nav-sub">PHARMA · LEARNING</div>
+      </div>
+    </a>
+    <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">菜单</button>
+    <div class="nav-links">
+      <a href="/">首页</a>
+      <a href="/days/" class="active">14 天课程</a>
+      <a href="/quiz.html">互动测验</a>
+      <a href="/illustration.html">知识图谱</a>
+      <a href="/about.html">关于</a>
+    </div>
+  </div>
+</nav>
+
+
+<header class="page-header">
+  <div class="narrow">
+    <div class="page-eyebrow">DAY 07 · 生物导弹</div>
+    <h1 class="page-title">ADC 抗体偶联药物</h1>
+  </div>
+</header>
+
+<main class="narrow">
+  <article class="article">
+<blockquote>
+<p>🎯 <strong>今日目标</strong>：掌握 ADC 的结构设计、作用原理、核心技术要素，理解 ADC 为何成为当前最热赛道之一。</p>
+</blockquote>
+<hr />
+<h2>一、ADC 是什么？</h2>
+<p><strong>ADC（Antibody-Drug Conjugate，抗体偶联药物）</strong> 是将<strong>抗体的精准靶向能力</strong>与<strong>化疗的强效杀伤力</strong>结合起来的一种创新药物。</p>
+<p>核心思想：用抗体作为"导航系统"，把细胞毒药物（Payload）精准"快递"到肿瘤细胞内部——所以被称为<strong>"生物导弹"</strong>。</p>
+<hr />
+<h2>二、ADC 的三大核心组件</h2>
+<pre><code>    [抗体 Antibody]——[连接子 Linker]——[载荷 Payload]
+         ↓                   ↓                 ↓
+    精准识别肿瘤细胞    控制药物释放时机    杀死肿瘤细胞
+</code></pre>
+<h3>2.1 抗体（Antibody）</h3>
+<ul>
+<li>负责识别肿瘤细胞表面的<strong>特异性抗原</strong></li>
+<li>决定了 ADC 的靶向性（打得准不准）</li>
+<li>理想的靶抗原：在肿瘤细胞上高表达、在正常细胞上低表达</li>
+</ul>
+<h3>2.2 连接子（Linker）</h3>
+<ul>
+<li>连接抗体和载荷的"桥梁"</li>
+<li><strong>要求极高</strong>：在血液循环中稳定（不能提前释放），到达肿瘤细胞内部后能迅速释放载荷</li>
+<li>两大类型：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>特点</th>
+<th>代表</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>可裂解型</strong></td>
+<td>在肿瘤微环境条件下断裂（低 pH、酶切）</td>
+<td>大多数新一代 ADC</td>
+</tr>
+<tr>
+<td><strong>不可裂解型</strong></td>
+<td>需要抗体在溶酶体中被完全降解后释放</td>
+<td>T-DM1 使用</td>
+</tr>
+</tbody>
+</table>
+<h3>2.3 载荷（Payload）</h3>
+<ul>
+<li>真正杀死肿瘤细胞的"弹头"</li>
+<li>通常是毒性极强的化合物（如果直接给患者使用会产生严重毒性）</li>
+<li>通过 ADC 递送，只在肿瘤细胞内释放，大幅降低全身毒性</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>载荷类型</th>
+<th>机制</th>
+<th>代表药物使用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>MMAE/MMAF</strong></td>
+<td>微管蛋白抑制</td>
+<td>Adcetris (维布妥昔单抗)</td>
+</tr>
+<tr>
+<td><strong>DXd</strong></td>
+<td>拓扑异构酶 I 抑制</td>
+<td>Enhertu (DS-8201)</td>
+</tr>
+<tr>
+<td><strong>PBD</strong></td>
+<td>DNA 交联</td>
+<td>Zynlonta</td>
+</tr>
+<tr>
+<td><strong>SN-38</strong></td>
+<td>拓扑异构酶 I 抑制</td>
+<td>Trodelvy</td>
+</tr>
+</tbody>
+</table>
+<h3>2.4 DAR（Drug-to-Antibody Ratio，药物抗体比）</h3>
+<ul>
+<li>每个抗体上连接几个载荷分子</li>
+<li>DAR 太低 → 疗效不够；DAR 太高 → 毒性太大、稳定性差</li>
+<li>理想 DAR 通常在 2-8 之间</li>
+<li>Enhertu 的 DAR≈8 且保持良好稳定性，是技术突破之一</li>
+</ul>
+<hr />
+<h2>三、ADC 的作用机制（完整流程）</h2>
+<pre><code>第1步：ADC 通过抗体识别并结合肿瘤细胞表面的抗原
+        ↓
+第2步：肿瘤细胞将 ADC 整体吞入细胞内部（内吞作用）
+        ↓
+第3步：ADC 进入溶酶体，连接子断裂（或抗体降解）
+        ↓
+第4步：载荷被释放到细胞质中
+        ↓
+第5步：载荷破坏 DNA 或阻止细胞分裂 → 肿瘤细胞死亡
+        ↓
+第6步（旁观者效应）：部分载荷可穿透细胞膜，杀死附近的肿瘤细胞
+                     （即使那些细胞不表达靶抗原）
+</code></pre>
+<blockquote>
+<p><strong>旁观者效应（Bystander Effect）</strong> 是新一代 ADC 的重要特性——它意味着 ADC 不仅能杀死靶抗原阳性的肿瘤细胞，还能"波及"附近的异质性肿瘤细胞。Enhertu 的出色疗效部分归功于此。</p>
+</blockquote>
+<hr />
+<h2>四、ADC 的进化史</h2>
+<table>
+<thead>
+<tr>
+<th>代际</th>
+<th>代表</th>
+<th>特点</th>
+<th>局限</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>第一代</strong></td>
+<td>Mylotarg (2000)</td>
+<td>概念验证</td>
+<td>毒性大，一度撤市</td>
+</tr>
+<tr>
+<td><strong>第二代</strong></td>
+<td>Kadcyla/T-DM1 (2013)</td>
+<td>稳定改进</td>
+<td>疗效有限，DAR 低</td>
+</tr>
+<tr>
+<td><strong>第三代</strong></td>
+<td>Enhertu/DS-8201 (2019)</td>
+<td>革命性突破</td>
+<td>当前标杆</td>
+</tr>
+</tbody>
+</table>
+<h3>Enhertu：改变游戏规则的 ADC</h3>
+<p>Enhertu（德曲妥珠单抗，DS-8201）由<strong>第一三共</strong>研发，与<strong>阿斯利康</strong>合作商业化，被认为是 ADC 领域的"分水岭"产品。</p>
+<p><strong>为什么 Enhertu 是突破性的？</strong></p>
+<table>
+<thead>
+<tr>
+<th>创新点</th>
+<th>意义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>高 DAR（≈8）</td>
+<td>每个抗体携带更多弹头，杀伤力更强</td>
+</tr>
+<tr>
+<td>可裂解连接子</td>
+<td>载荷可以穿透细胞膜，产生旁观者效应</td>
+</tr>
+<tr>
+<td>DXd 载荷</td>
+<td>强效但半衰期短，全身毒性相对可控</td>
+</tr>
+<tr>
+<td>HER2 低表达也有效</td>
+<td>打破了"靶抗原必须高表达"的传统认知</td>
+</tr>
+</tbody>
+</table>
+<p><strong>DESTINY-Breast04 试验</strong>证明 Enhertu 在 HER2 低表达乳腺癌患者中也有显著疗效——这将适用人群从乳腺癌的 15-20% 扩大到了约 55%，市场空间大幅扩容。</p>
+<hr />
+<h2>五、ADC 赛道的投资格局</h2>
+<h3>5.1 全球重磅 BD 交易</h3>
+<p>ADC 是近年来医药行业并购和合作的最热领域：</p>
+<table>
+<thead>
+<tr>
+<th>交易</th>
+<th>时间</th>
+<th>金额</th>
+<th>意义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>辉瑞收购 Seagen</td>
+<td>2023</td>
+<td>430 亿美元</td>
+<td>史上最大 ADC 收购</td>
+</tr>
+<tr>
+<td>阿斯利康合作第一三共</td>
+<td>2023</td>
+<td>总额 60 亿美元+</td>
+<td>Enhertu 全球权益</td>
+</tr>
+<tr>
+<td>默沙东合作第一三共</td>
+<td>2023</td>
+<td>220 亿美元</td>
+<td>3 款 ADC 全球权益</td>
+</tr>
+<tr>
+<td>艾伯维收购 ImmunoGen</td>
+<td>2024</td>
+<td>101 亿美元</td>
+<td>Elahere（卵巢癌 ADC）</td>
+</tr>
+</tbody>
+</table>
+<h3>5.2 中国 ADC 出海</h3>
+<p>中国 ADC 企业在全球 License-out 交易中表现突出：</p>
+<table>
+<thead>
+<tr>
+<th>公司</th>
+<th>交易</th>
+<th>金额</th>
+<th>靶点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>映恩生物</strong></td>
+<td>与 BioNTech 合作</td>
+<td>首付 + 里程碑 ~10 亿美元</td>
+<td>HER2 ADC</td>
+</tr>
+<tr>
+<td><strong>宜联生物</strong></td>
+<td>与百时美施贵宝合作</td>
+<td>总额 84 亿美元</td>
+<td>多个 ADC</td>
+</tr>
+<tr>
+<td><strong>科伦博泰</strong></td>
+<td>与默沙东合作</td>
+<td>总额 118 亿美元</td>
+<td>多个 ADC</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>投资信号</strong>：海外大药企以巨额资金"购买"中国 ADC 管线，是对中国 ADC 技术实力的验证。关注哪些中国 Biotech 有 ADC 平台技术（而非单一产品）。</p>
+</blockquote>
+<h3>5.3 ADC 投资的关键评估维度</h3>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>需要关注什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>靶点选择</strong></td>
+<td>靶抗原在肿瘤上的表达是否特异？竞争是否拥挤？</td>
+</tr>
+<tr>
+<td><strong>技术平台</strong></td>
+<td>连接子和载荷技术是否具有差异化？</td>
+</tr>
+<tr>
+<td><strong>DAR 和稳定性</strong></td>
+<td>高 DAR 是否带来稳定性问题？</td>
+</tr>
+<tr>
+<td><strong>临床数据</strong></td>
+<td>ORR、PFS、安全性（间质性肺炎是 ADC 常见风险）</td>
+</tr>
+<tr>
+<td><strong>竞争格局</strong></td>
+<td>同靶点有多少竞品在研？</td>
+</tr>
+<tr>
+<td><strong>适应症策略</strong></td>
+<td>先攻晚线还是直接挑战一线？</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>六、ADC 的风险和挑战</h2>
+<table>
+<thead>
+<tr>
+<th>风险</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>间质性肺炎（ILD）</strong></td>
+<td>ADC 类药物的常见严重不良反应，Enhertu 曾因此受到关注</td>
+</tr>
+<tr>
+<td><strong>耐药性</strong></td>
+<td>肿瘤可能下调靶抗原表达或改变内吞途径</td>
+</tr>
+<tr>
+<td><strong>生产复杂</strong></td>
+<td>ADC 的偶联工艺要求极高，CMC 是重大挑战</td>
+</tr>
+<tr>
+<td><strong>竞争加剧</strong></td>
+<td>ADC 赛道正在快速拥挤，重蹈 PD-1 覆辙的风险存在</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>七、投资视角小结</h2>
+<blockquote>
+<p>💡 <strong>投资启示</strong></p>
+</blockquote>
+<ol>
+<li><strong>ADC 是当前全球最热的创新药赛道</strong>：大药企的"买买买"（百亿美元级并购）说明行业共识。</li>
+<li><strong>技术平台 &gt; 单一产品</strong>：拥有自主连接子/载荷技术平台的企业比只有单一 ADC 产品的企业更有长期价值。</li>
+<li><strong>关注安全性窗口</strong>：ADC 的核心挑战是在疗效和毒性之间取得平衡。ILD（间质性肺炎）是必须关注的风险。</li>
+<li><strong>中国 ADC 企业是全球 BD 交易的热门标的</strong>：License-out 交易金额是评估中国 ADC 企业价值的重要参考。</li>
+<li><strong>警惕"PD-1 内卷"重演</strong>：HER2 ADC 赛道已开始拥挤，需要关注差异化靶点（如 B7-H3、Claudin 18.2、TROP2 等）。</li>
+</ol>
+<hr />
+<h2>📝 今日自检</h2>
+<ol>
+<li>ADC 的三大组件分别是什么？各自的作用是什么？</li>
+<li>什么是"旁观者效应"？为什么它很重要？</li>
+<li>Enhertu 为什么被认为是 ADC 领域的"分水岭"产品？</li>
+<li>从投资角度，评估一家 ADC 公司需要关注哪些维度？</li>
+<li>ADC 赛道面临的最大风险是什么？</li>
+</ol>
+<blockquote>
+<p>✅ 完成自检后进入 Day 8：GLP-1、基因治疗与 AI 制药——其他前沿赛道。</p>
+</blockquote>
+  </article>
+  
+  <nav class="day-nav">
+    
+      <a href="day-06.html" class="prev">
+        <div class="nav-label">← Day 06</div>
+        <div class="nav-title-link">肿瘤免疫治疗与 PD-1</div>
+      </a>
+    
+      <a href="day-08.html" class="next">
+        <div class="nav-label">Day 08 →</div>
+        <div class="nav-title-link">GLP-1 / 基因治疗 / AI 制药</div>
+      </a>
+  </nav>
+</main>
+
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">创新药自学指南</div>
+      <div class="footer-tagline">为零基础投资者设计的 14 天学习路径</div>
+    </div>
+    <div class="footer-col">
+      <h4>导航</h4>
+      <a href="/">首页</a>
+      <a href="/days/">14 天课程</a>
+      <a href="/quiz.html">互动测验</a>
+      <a href="/illustration.html">知识图谱</a>
+    </div>
+    <div class="footer-col">
+      <h4>资源</h4>
+      <a href="https://clinicaltrials.gov" target="_blank">ClinicalTrials.gov</a>
+      <a href="https://www.fda.gov" target="_blank">FDA</a>
+      <a href="/about.html">关于本站</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    INNOVATIVE DRUG LEARNING GUIDE · 14 天学习路径 · 投资视角
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="创新药学习 Day 10：估值方法与投资框架 - rNPV 与 Biotech 估值">
+<title>Day 10 · 估值方法与投资框架 · 创新药自学指南</title>
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-brand">
+      <div class="nav-mark">药</div>
+      <div>
+        <div class="nav-title">创新药自学指南</div>
+        <div class="nav-sub">PHARMA · LEARNING</div>
+      </div>
+    </a>
+    <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">菜单</button>
+    <div class="nav-links">
+      <a href="/">首页</a>
+      <a href="/days/" class="active">14 天课程</a>
+      <a href="/quiz.html">互动测验</a>
+      <a href="/illustration.html">知识图谱</a>
+      <a href="/about.html">关于</a>
+    </div>
+  </div>
+</nav>
+
+
+<header class="page-header">
+  <div class="narrow">
+    <div class="page-eyebrow">DAY 10 · rNPV 与 Biotech 估值</div>
+    <h1 class="page-title">估值方法与投资框架</h1>
+  </div>
+</header>
+
+<main class="narrow">
+  <article class="article">
+<blockquote>
+<p>🎯 <strong>今日目标</strong>：掌握 rNPV 估值逻辑、理解 Biotech 的投资框架、学会搭建催化剂日历和风险评估。</p>
+</blockquote>
+<hr />
+<h2>一、为什么传统估值方法不适用于 Biotech？</h2>
+<table>
+<thead>
+<tr>
+<th>传统方法</th>
+<th>问题</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>P/E（市盈率）</strong></td>
+<td>大多数 Biotech 没有盈利，甚至没有收入</td>
+</tr>
+<tr>
+<td><strong>P/S（市销率）</strong></td>
+<td>没有产品上市 = 没有收入</td>
+</tr>
+<tr>
+<td><strong>P/B（市净率）</strong></td>
+<td>核心资产是无形的知识产权，账面价值无意义</td>
+</tr>
+<tr>
+<td><strong>DCF（现金流折现）</strong></td>
+<td>未来现金流高度不确定，假设太多</td>
+</tr>
+</tbody>
+</table>
+<p><strong>结论</strong>：Biotech 的价值核心在于<strong>在研管线的未来潜力</strong>，需要专门的估值方法。</p>
+<hr />
+<h2>二、rNPV：创新药估值的"行业标准"</h2>
+<h3>2.1 什么是 rNPV？</h3>
+<p><strong>rNPV（Risk-adjusted Net Present Value，风险调整净现值）</strong> 是将每条管线的未来潜在收入，按<strong>成功概率</strong>和<strong>折现率</strong>进行调整后的现值。</p>
+<h3>2.2 核心公式</h3>
+<pre><code>管线价值 = Σ（未来每年的现金流 × 成功概率）÷ (1 + 折现率)^年数 - 研发投入
+</code></pre>
+<p>拆解来看：</p>
+<pre><code>单条管线的 rNPV = 
+    峰值年销售额 
+    × 利润率 
+    × 销售年限（独占期）
+    × 当前阶段到上市的成功概率 
+    ÷ (1 + r)^n
+    - 未来需要投入的研发费用
+
+公司总估值 = Σ 所有管线 rNPV + 现金 - 负债
+</code></pre>
+<h3>2.3 关键参数详解</h3>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>含义</th>
+<th>如何估算</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>峰值销售额（Peak Sales）</strong></td>
+<td>产品上市后最高年度销售额</td>
+<td>参考同类药物、患者人群、定价、市占率</td>
+</tr>
+<tr>
+<td><strong>成功概率（PoS）</strong></td>
+<td>从当前阶段到获批上市的概率</td>
+<td>行业历史数据（见下表）</td>
+</tr>
+<tr>
+<td><strong>折现率（r）</strong></td>
+<td>反映投资风险</td>
+<td>通常 10-15%（高风险 Biotech 用更高）</td>
+</tr>
+<tr>
+<td><strong>销售年限</strong></td>
+<td>独占销售的年数</td>
+<td>从获批到专利过期/竞品出现</td>
+</tr>
+<tr>
+<td><strong>利润率</strong></td>
+<td>净利润/销售额</td>
+<td>创新药通常 60-80% 毛利率</td>
+</tr>
+</tbody>
+</table>
+<h3>2.4 各阶段的历史成功概率</h3>
+<table>
+<thead>
+<tr>
+<th>当前阶段</th>
+<th>到达上市的历史成功概率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>靶点发现</td>
+<td>~2-5%</td>
+</tr>
+<tr>
+<td>临床前</td>
+<td>~5-10%</td>
+</tr>
+<tr>
+<td>I 期</td>
+<td>~10-15%</td>
+</tr>
+<tr>
+<td>II 期</td>
+<td>~15-25%</td>
+</tr>
+<tr>
+<td>III 期</td>
+<td>~50-60%</td>
+</tr>
+<tr>
+<td>NDA 已提交</td>
+<td>~85-90%</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>核心逻辑</strong>：管线越往后推进，成功概率越高 → 价值越高 → 股价的上涨空间主要来自于管线推进带来的"概率跃升"。</p>
+</blockquote>
+<h3>2.5 简化估值示例</h3>
+<p>假设一家 Biotech 公司有一条 II 期管线：</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>假设值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>峰值销售额</td>
+<td>10 亿美元/年</td>
+</tr>
+<tr>
+<td>利润率</td>
+<td>70%</td>
+</tr>
+<tr>
+<td>独占销售期</td>
+<td>10 年</td>
+</tr>
+<tr>
+<td>当前阶段成功概率</td>
+<td>20%（II 期）</td>
+</tr>
+<tr>
+<td>折现率</td>
+<td>12%</td>
+</tr>
+<tr>
+<td>距上市时间</td>
+<td>5 年</td>
+</tr>
+</tbody>
+</table>
+<p><strong>粗算</strong>：
+- 峰值年利润：10 × 70% = 7 亿美元
+- 假设销售 10 年的利润总和折现值 ≈ 40 亿美元
+- 风险调整：40 × 20% = 8 亿美元
+- 再折现 5 年：8 ÷ 1.12^5 ≈ 4.5 亿美元</p>
+<p><strong>这条管线今天的价值约 4.5 亿美元</strong>。如果 II 期成功进入 III 期，成功概率跃升到 50%+，价值可能翻倍以上——这就是<strong>"数据催化剂"</strong>驱动股价上涨的逻辑。</p>
+<hr />
+<h2>三、其他估值参考方法</h2>
+<h3>3.1 可比交易法（Comparable Deals）</h3>
+<p>参考行业内类似管线的 BD 交易估值：</p>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>参考方式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>首付款金额</td>
+<td>反映管线的即时价值</td>
+</tr>
+<tr>
+<td>总交易金额</td>
+<td>反映管线的最大潜在价值</td>
+</tr>
+<tr>
+<td>里程碑付款结构</td>
+<td>反映买方对成功概率的判断</td>
+</tr>
+</tbody>
+</table>
+<p>例如：如果同类 ADC 管线的 License-out 总交易金额普遍在 10-20 亿美元，那么类似管线的内部估值不应偏离太多。</p>
+<h3>3.2 可比公司法</h3>
+<p>参考同赛道、同阶段公司的市值/估值倍数：
+- 按管线阶段分类
+- 按适应症/靶点分类
+- 看市值/管线数量的比值</p>
+<h3>3.3 峰值销售额倍数法</h3>
+<p><strong>简便法</strong>：峰值销售额 × 成功概率 × 倍数（通常 3-5x）</p>
+<p>例如：峰值销售 30 亿美元 × 20%（II 期）× 4x = 24 亿美元估值</p>
+<hr />
+<h2>四、Biotech 投资的完整框架</h2>
+<h3>4.1 分析框架（投资前的"检查清单"）</h3>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>核心问题</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>管线质量</strong></td>
+<td>靶点是否经过验证？FIC 还是 BIC？适应症市场有多大？</td>
+</tr>
+<tr>
+<td><strong>临床数据</strong></td>
+<td>已有数据是否支持继续推进？与竞品相比如何？</td>
+</tr>
+<tr>
+<td><strong>竞争格局</strong></td>
+<td>同靶点/同适应症有多少竞品？差异化在哪里？</td>
+</tr>
+<tr>
+<td><strong>管理团队</strong></td>
+<td>团队是否有成功的研发和商业化经验？</td>
+</tr>
+<tr>
+<td><strong>现金状况</strong></td>
+<td>现金能支撑到下一个关键里程碑吗？（"Cash Runway"）</td>
+</tr>
+<tr>
+<td><strong>催化剂</strong></td>
+<td>未来 12 个月有哪些关键事件？（数据读出、审评节点等）</td>
+</tr>
+<tr>
+<td><strong>估值</strong></td>
+<td>当前市值 vs rNPV 估算值，是否有安全边际？</td>
+</tr>
+</tbody>
+</table>
+<h3>4.2 催化剂日历：投资创新药的"作战地图"</h3>
+<p>一个典型的催化剂日历长这样：</p>
+<table>
+<thead>
+<tr>
+<th>时间</th>
+<th>事件</th>
+<th>影响</th>
+<th>风险</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Q1 2025</td>
+<td>产品 A 的 II 期数据读出</td>
+<td>高（决定是否推进 III 期）</td>
+<td>二元风险，失败则暴跌</td>
+</tr>
+<tr>
+<td>Q2 2025</td>
+<td>产品 B 的 III 期入组完成</td>
+<td>中（里程碑）</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Q3 2025</td>
+<td>产品 C 的 PDUFA Date</td>
+<td>高（获批 vs CRL）</td>
+<td>CRL 风险</td>
+</tr>
+<tr>
+<td>Q4 2025</td>
+<td>中国医保谈判结果</td>
+<td>高（放量 vs 降价幅度）</td>
+<td>降价超预期</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>投资策略</strong>：在催化剂事件之前建仓（承担二元风险获取超额收益），或等催化剂兑现后再判断（牺牲部分收益但降低风险）。</p>
+</blockquote>
+<h3>4.3 Big Pharma vs Biotech 的投资逻辑差异</h3>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>Big Pharma（大药企）</th>
+<th>Biotech（生物科技公司）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>收入</td>
+<td>有成熟产品，收入稳定</td>
+<td>通常无收入或收入很少</td>
+</tr>
+<tr>
+<td>估值方法</td>
+<td>P/E、DCF 可用</td>
+<td>rNPV 为主</td>
+</tr>
+<tr>
+<td>风险</td>
+<td>专利悬崖、管线补充</td>
+<td>临床失败、现金耗尽</td>
+</tr>
+<tr>
+<td>催化剂</td>
+<td>适应症拓展、BD 交易</td>
+<td>数据读出、审评节点</td>
+</tr>
+<tr>
+<td>股价特征</td>
+<td>相对稳定</td>
+<td>高波动（事件驱动）</td>
+</tr>
+<tr>
+<td>投资逻辑</td>
+<td>稳健增长 + 股息</td>
+<td>高风险高回报</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>五、风险管理：创新药投资的"生存法则"</h2>
+<h3>5.1 核心风险</h3>
+<table>
+<thead>
+<tr>
+<th>风险类型</th>
+<th>说明</th>
+<th>应对</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>临床失败</strong></td>
+<td>数据不达预期，项目终止</td>
+<td>分散投资、不赌单一管线</td>
+</tr>
+<tr>
+<td><strong>融资稀释</strong></td>
+<td>增发股票融资，稀释股东权益</td>
+<td>关注 Cash Runway</td>
+</tr>
+<tr>
+<td><strong>政策变化</strong></td>
+<td>集采、医保谈判、监管收紧</td>
+<td>关注政策风向</td>
+</tr>
+<tr>
+<td><strong>竞争内卷</strong></td>
+<td>同赛道拥挤，价格战</td>
+<td>选有差异化壁垒的企业</td>
+</tr>
+<tr>
+<td><strong>专利悬崖</strong></td>
+<td>核心品种专利到期</td>
+<td>关注管线补充和生命周期管理</td>
+</tr>
+<tr>
+<td><strong>管理层风险</strong></td>
+<td>关键人员离职、战略失误</td>
+<td>尽调管理团队</td>
+</tr>
+</tbody>
+</table>
+<h3>5.2 仓位管理原则</h3>
+<ul>
+<li><strong>不把鸡蛋放在一个篮子里</strong>：分散到多个赛道和多个阶段</li>
+<li><strong>控制单一事件的仓位风险</strong>：数据读出前降低仓位（除非有高度信心）</li>
+<li><strong>关注 Cash Runway</strong>：如果公司的现金不足以支撑到下一个里程碑，可能面临被迫融资或卖管线的困境</li>
+</ul>
+<hr />
+<h2>六、投资视角小结</h2>
+<blockquote>
+<p>💡 <strong>投资启示</strong></p>
+</blockquote>
+<ol>
+<li><strong>rNPV 是理解 Biotech 估值的核心工具</strong>：掌握了 rNPV，你就能理解为什么一家没有收入的公司市值可以达到数十亿美元。</li>
+<li><strong>管线推进 = 概率跃升 = 价值增长</strong>：这是创新药投资的核心驱动力。</li>
+<li><strong>催化剂日历是"作战地图"</strong>：提前了解关键事件的时间节点。</li>
+<li><strong>Cash Runway 是"生命线"</strong>：关注公司的现金储备和季度现金消耗率。</li>
+<li><strong>风险管理比选股更重要</strong>：在这个高波动行业，生存下来才能赢。</li>
+</ol>
+<hr />
+<h2>📝 今日自检</h2>
+<ol>
+<li>为什么传统的 P/E 估值不适用于大多数 Biotech 公司？</li>
+<li>rNPV 的核心思路是什么？（用一句话概括）</li>
+<li>一条管线从 II 期推进到 III 期，成功概率如何变化？这对估值有什么影响？</li>
+<li>投资 Biotech 公司前，你应该重点评估哪些维度？</li>
+<li>什么是 Cash Runway？为什么它对 Biotech 投资如此重要？</li>
+</ol>
+<blockquote>
+<p>✅ 完成自检后进入 Day 11：实战案例——拆解一家创新药企业。</p>
+</blockquote>
+  </article>
+  
+  <nav class="day-nav">
+    
+      <a href="day-09.html" class="prev">
+        <div class="nav-label">← Day 09</div>
+        <div class="nav-title-link">如何看懂临床数据</div>
+      </a>
+    
+      <a href="day-11.html" class="next">
+        <div class="nav-label">Day 11 →</div>
+        <div class="nav-title-link">实战案例分析</div>
+      </a>
+  </nav>
+</main>
+
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">创新药自学指南</div>
+      <div class="footer-tagline">为零基础投资者设计的 14 天学习路径</div>
+    </div>
+    <div class="footer-col">
+      <h4>导航</h4>
+      <a href="/">首页</a>
+      <a href="/days/">14 天课程</a>
+      <a href="/quiz.html">互动测验</a>
+      <a href="/illustration.html">知识图谱</a>
+    </div>
+    <div class="footer-col">
+      <h4>资源</h4>
+      <a href="https://clinicaltrials.gov" target="_blank">ClinicalTrials.gov</a>
+      <a href="https://www.fda.gov" target="_blank">FDA</a>
+      <a href="/about.html">关于本站</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    INNOVATIVE DRUG LEARNING GUIDE · 14 天学习路径 · 投资视角
+  </div>
+</footer>
+
+</body>
+</html>

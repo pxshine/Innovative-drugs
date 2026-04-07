@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="创新药学习 Day 08：GLP-1 / 基因治疗 / AI 制药 - 三大前沿">
+<title>Day 08 · GLP-1 / 基因治疗 / AI 制药 · 创新药自学指南</title>
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-brand">
+      <div class="nav-mark">药</div>
+      <div>
+        <div class="nav-title">创新药自学指南</div>
+        <div class="nav-sub">PHARMA · LEARNING</div>
+      </div>
+    </a>
+    <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">菜单</button>
+    <div class="nav-links">
+      <a href="/">首页</a>
+      <a href="/days/" class="active">14 天课程</a>
+      <a href="/quiz.html">互动测验</a>
+      <a href="/illustration.html">知识图谱</a>
+      <a href="/about.html">关于</a>
+    </div>
+  </div>
+</nav>
+
+
+<header class="page-header">
+  <div class="narrow">
+    <div class="page-eyebrow">DAY 08 · 三大前沿</div>
+    <h1 class="page-title">GLP-1 / 基因治疗 / AI 制药</h1>
+  </div>
+</header>
+
+<main class="narrow">
+  <article class="article">
+<blockquote>
+<p>🎯 <strong>今日目标</strong>：快速掌握除 PD-1 和 ADC 之外的三大前沿赛道的基本原理、代表产品和投资逻辑。</p>
+</blockquote>
+<hr />
+<h2>一、GLP-1：从糖尿病到减肥的"超级赛道"</h2>
+<h3>1.1 什么是 GLP-1？</h3>
+<p><strong>GLP-1（Glucagon-Like Peptide-1，胰高血糖素样肽-1）</strong> 是人体天然分泌的一种肠促胰素，进食后由小肠分泌。</p>
+<p>主要功能：
+- 促进胰腺分泌胰岛素 → 降低血糖
+- 抑制胰高血糖素分泌 → 减少肝糖输出
+- 延缓胃排空 → 增加饱腹感
+- 作用于大脑食欲中枢 → 降低食欲</p>
+<h3>1.2 GLP-1 受体激动剂：多肽药物的巅峰</h3>
+<p><strong>GLP-1 受体激动剂（GLP-1 RA）</strong> 模拟天然 GLP-1 的作用，但半衰期更长、药效更强。</p>
+<table>
+<thead>
+<tr>
+<th>药物</th>
+<th>公司</th>
+<th>适应症</th>
+<th>给药方式</th>
+<th>年销售额（2023）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>司美格鲁肽（Ozempic）</strong></td>
+<td>诺和诺德</td>
+<td>糖尿病</td>
+<td>每周一次皮下注射</td>
+<td>~180 亿美元</td>
+</tr>
+<tr>
+<td><strong>司美格鲁肽（Wegovy）</strong></td>
+<td>诺和诺德</td>
+<td>减重</td>
+<td>每周一次皮下注射</td>
+<td>~45 亿美元</td>
+</tr>
+<tr>
+<td><strong>Rybelsus</strong></td>
+<td>诺和诺德</td>
+<td>糖尿病</td>
+<td>口服（！）</td>
+<td>~30 亿美元</td>
+</tr>
+<tr>
+<td><strong>替尔泊肽（Mounjaro）</strong></td>
+<td>礼来</td>
+<td>糖尿病/减重</td>
+<td>GIP/GLP-1 双靶点</td>
+<td>~52 亿美元</td>
+</tr>
+<tr>
+<td><strong>替尔泊肽（Zepbound）</strong></td>
+<td>礼来</td>
+<td>减重</td>
+<td>GIP/GLP-1 双靶点</td>
+<td>快速增长</td>
+</tr>
+</tbody>
+</table>
+<h3>1.3 为什么 GLP-1 是"超级赛道"？</h3>
+<p><strong>市场空间可能是历史上最大的单一药物赛道</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>扩展方向</th>
+<th>潜在患者人群</th>
+<th>进展</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>糖尿病</td>
+<td>全球 5 亿+</td>
+<td>已获批（核心适应症）</td>
+</tr>
+<tr>
+<td>肥胖/减重</td>
+<td>全球 10 亿+ 超重人群</td>
+<td>已获批，快速放量</td>
+</tr>
+<tr>
+<td>心血管保护</td>
+<td>糖尿病/肥胖合并心血管疾病</td>
+<td>SELECT 试验证实心血管获益</td>
+</tr>
+<tr>
+<td>NASH/MASH（脂肪肝）</td>
+<td>全球数亿</td>
+<td>临床探索中</td>
+</tr>
+<tr>
+<td>慢性肾病</td>
+<td>糖尿病肾病</td>
+<td>FLOW 试验积极</td>
+</tr>
+<tr>
+<td>阿尔茨海默症</td>
+<td>探索性</td>
+<td>早期研究</td>
+</tr>
+<tr>
+<td>成瘾（酒精/烟草）</td>
+<td>探索性</td>
+<td>早期信号</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>华尔街预测，GLP-1 类药物到 2030 年的全球市场规模可能达到 <strong>1000 亿美元+</strong>。这使得诺和诺德和礼来成为全球市值最高的药企之一。</p>
+</blockquote>
+<h3>1.4 GLP-1 投资的关键问题</h3>
+<table>
+<thead>
+<tr>
+<th>问题</th>
+<th>分析</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>产能</td>
+<td>多肽药物生产复杂，供不应求是当前最大瓶颈</td>
+</tr>
+<tr>
+<td>口服化</td>
+<td>谁能率先做出疗效媲美注射剂的口服 GLP-1？（巨大市场）</td>
+</tr>
+<tr>
+<td>竞争</td>
+<td>多家企业在研下一代 GLP-1（小分子口服、三靶点等）</td>
+</tr>
+<tr>
+<td>安全性</td>
+<td>长期减重的安全性数据仍在积累（肌肉流失等担忧）</td>
+</tr>
+<tr>
+<td>支付</td>
+<td>减肥适应症的医保覆盖/商保报销是放量关键</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>二、细胞与基因治疗（CGT）</h2>
+<h3>2.1 基因治疗：从根源修复</h3>
+<p><strong>基因治疗</strong>是将正常基因导入患者体内，替代或修复缺陷基因，从而在根源上治疗疾病。</p>
+<p>理论上，基因治疗可以<strong>"一次治愈"</strong>——这与传统药物需要终身服药完全不同。</p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>原理</th>
+<th>代表</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>基因替代</strong></td>
+<td>导入正常基因补偿缺陷基因</td>
+<td>Zolgensma（SMA，脊髓性肌萎缩症）</td>
+</tr>
+<tr>
+<td><strong>基因编辑</strong></td>
+<td>用 CRISPR 等工具精准修改基因</td>
+<td>Casgevy（镰刀型贫血，CRISPR 首个获批）</td>
+</tr>
+<tr>
+<td><strong>基因沉默</strong></td>
+<td>用 RNA 干扰（RNAi）关闭致病基因</td>
+<td>Inclisiran（降脂，每半年注射一次）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>关键技术——递送载体</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>载体</th>
+<th>特点</th>
+<th>风险</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>AAV（腺相关病毒）</strong></td>
+<td>最常用，安全性相对好</td>
+<td>免疫原性、产能有限</td>
+</tr>
+<tr>
+<td><strong>LNP（脂质纳米颗粒）</strong></td>
+<td>mRNA 疫苗使用的技术</td>
+<td>肝脏靶向为主</td>
+</tr>
+<tr>
+<td><strong>慢病毒</strong></td>
+<td>CAR-T 中常用</td>
+<td>基因整合风险</td>
+</tr>
+</tbody>
+</table>
+<h3>2.2 细胞治疗：改造免疫战士</h3>
+<p><strong>细胞治疗</strong>是把患者或供体的免疫细胞取出，在体外进行基因改造，再输回患者体内攻击肿瘤。</p>
+<p><strong>CAR-T（嵌合抗原受体 T 细胞）疗法</strong>是目前最成功的细胞治疗：</p>
+<pre><code>第1步：从患者血液中提取 T 细胞
+第2步：在体外用病毒载体给 T 细胞装上&quot;GPS&quot;（CAR 受体）
+第3步：扩增改造后的 T 细胞至数亿个
+第4步：回输到患者体内
+第5步：CAR-T 细胞识别并杀死带有特定抗原的肿瘤细胞
+</code></pre>
+<p><strong>已获批的 CAR-T 产品</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>产品</th>
+<th>靶点</th>
+<th>适应症</th>
+<th>价格</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Kymriah</td>
+<td>CD19</td>
+<td>B 细胞急淋/弥漫大 B</td>
+<td>~$47.5 万</td>
+</tr>
+<tr>
+<td>Yescarta</td>
+<td>CD19</td>
+<td>弥漫大 B 细胞淋巴瘤</td>
+<td>~$37.3 万</td>
+</tr>
+<tr>
+<td>Carvykti</td>
+<td>BCMA</td>
+<td>多发性骨髓瘤</td>
+<td>~$46.5 万</td>
+</tr>
+<tr>
+<td>奕凯达</td>
+<td>CD19</td>
+<td>弥漫大 B</td>
+<td>¥120 万（复星凯特）</td>
+</tr>
+</tbody>
+</table>
+<h3>2.3 CGT 的投资挑战</h3>
+<table>
+<thead>
+<tr>
+<th>挑战</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>极高定价</strong></td>
+<td>单次治疗费用数十万至数百万美元</td>
+</tr>
+<tr>
+<td><strong>支付困境</strong></td>
+<td>保险/医保如何承担？分期支付？按疗效付费？</td>
+</tr>
+<tr>
+<td><strong>生产限制</strong></td>
+<td>自体 CAR-T 需要为每个患者单独制备（个性化生产）</td>
+</tr>
+<tr>
+<td><strong>实体瘤突破</strong></td>
+<td>CAR-T 在血液瘤中效果好，在实体瘤中仍挑战巨大</td>
+</tr>
+<tr>
+<td><strong>长期安全性</strong></td>
+<td>细胞因子释放综合征（CRS）、神经毒性、继发性肿瘤风险</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>下一代方向</strong>：通用型 CAR-T（异体来源，不需要为每个患者单独制备）、体内 CAR-T（直接在体内改造 T 细胞，无需提取-回输）、CAR-NK（用自然杀伤细胞替代 T 细胞）。</p>
+</blockquote>
+<hr />
+<h2>三、AI 制药：技术赋能的新范式</h2>
+<h3>3.1 AI 在制药中能做什么？</h3>
+<table>
+<thead>
+<tr>
+<th>应用场景</th>
+<th>AI 的作用</th>
+<th>价值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>靶点发现</strong></td>
+<td>分析基因组/蛋白质组数据，预测新靶点</td>
+<td>缩短发现周期</td>
+</tr>
+<tr>
+<td><strong>分子设计</strong></td>
+<td>生成和优化候选分子</td>
+<td>减少合成-测试循环</td>
+</tr>
+<tr>
+<td><strong>蛋白质结构预测</strong></td>
+<td>AlphaFold 预测 3D 结构</td>
+<td>加速 SBDD</td>
+</tr>
+<tr>
+<td><strong>临床试验优化</strong></td>
+<td>患者筛选、终点预测、方案优化</td>
+<td>提高成功率</td>
+</tr>
+<tr>
+<td><strong>药物重定位</strong></td>
+<td>发现已有药物的新适应症</td>
+<td>低成本快速进入临床</td>
+</tr>
+</tbody>
+</table>
+<h3>3.2 代表公司</h3>
+<table>
+<thead>
+<tr>
+<th>公司</th>
+<th>定位</th>
+<th>进展</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Recursion</strong></td>
+<td>表型筛选 + AI</td>
+<td>多管线进入临床</td>
+</tr>
+<tr>
+<td><strong>Insilico Medicine（英矽智能）</strong></td>
+<td>全流程 AI 制药</td>
+<td>AI 设计分子进入 II 期</td>
+</tr>
+<tr>
+<td><strong>Isomorphic Labs</strong></td>
+<td>DeepMind 旗下</td>
+<td>AlphaFold 技术应用</td>
+</tr>
+<tr>
+<td><strong>晶泰科技</strong></td>
+<td>AI + 自动化合成</td>
+<td>为药企提供服务</td>
+</tr>
+<tr>
+<td><strong>Absci</strong></td>
+<td>AI 抗体设计</td>
+<td>从头设计抗体</td>
+</tr>
+</tbody>
+</table>
+<h3>3.3 AI 制药的现实检验</h3>
+<blockquote>
+<p><strong>冷静看待 AI 制药</strong>：</p>
+</blockquote>
+<ul>
+<li>截至目前，<strong>纯 AI 设计的药物获批上市的案例为零</strong></li>
+<li>多数 AI 制药公司仍在早期阶段，商业模式未跑通</li>
+<li>AI 能加速药物发现阶段，但<strong>临床试验仍需数年时间</strong>——AI 无法跳过人体验证</li>
+<li>真正的价值可能是<strong>"提高临床成功率"</strong>而非"缩短时间"</li>
+</ul>
+<blockquote>
+<p><strong>投资逻辑</strong>：
+- 短期看合作订单和管线推进速度
+- 中期看 AI 设计分子的临床数据（能否验证 AI 的预测能力）
+- 长期看是否能构建"数据飞轮"（更多数据 → 更好模型 → 更好药物 → 更多数据）</p>
+</blockquote>
+<hr />
+<h2>四、投资视角小结</h2>
+<blockquote>
+<p>💡 <strong>投资启示</strong></p>
+</blockquote>
+<ol>
+<li><strong>GLP-1 是"百年一遇"的超级赛道</strong>：市场空间可能超千亿美元。核心变量是产能、口服化进展和适应症拓展。</li>
+<li><strong>CGT 是"一次治愈"的终极愿景</strong>：但商业化面临定价和支付的巨大挑战。关注通用型 CAR-T 和体内基因编辑的技术突破。</li>
+<li><strong>AI 制药需要"去概念化"</strong>：不要被概念炒作迷惑，关注实际的临床数据验证。AI + 制药的真正爆发可能还需要 5-10 年。</li>
+<li><strong>三大赛道的风险-回报特征不同</strong>：
+   - GLP-1：确定性最高，但估值已充分反映
+   - CGT：长期潜力大，但短期商业化困难
+   - AI 制药：概念性最强，需要耐心等待验证</li>
+</ol>
+<hr />
+<h2>📝 今日自检</h2>
+<ol>
+<li>GLP-1 受体激动剂的作用机制是什么？为什么它能同时降糖和减重？</li>
+<li>GLP-1 赛道面临的最大瓶颈是什么？</li>
+<li>基因治疗和传统药物治疗的根本区别是什么？</li>
+<li>CAR-T 治疗的基本流程是怎样的？它面临哪些商业化挑战？</li>
+<li>AI 制药目前最大的局限性是什么？</li>
+</ol>
+<blockquote>
+<p>✅ 完成自检后进入 Day 9：如何看懂创新药的临床数据。</p>
+</blockquote>
+  </article>
+  
+  <nav class="day-nav">
+    
+      <a href="day-07.html" class="prev">
+        <div class="nav-label">← Day 07</div>
+        <div class="nav-title-link">ADC 抗体偶联药物</div>
+      </a>
+    
+      <a href="day-09.html" class="next">
+        <div class="nav-label">Day 09 →</div>
+        <div class="nav-title-link">如何看懂临床数据</div>
+      </a>
+  </nav>
+</main>
+
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">创新药自学指南</div>
+      <div class="footer-tagline">为零基础投资者设计的 14 天学习路径</div>
+    </div>
+    <div class="footer-col">
+      <h4>导航</h4>
+      <a href="/">首页</a>
+      <a href="/days/">14 天课程</a>
+      <a href="/quiz.html">互动测验</a>
+      <a href="/illustration.html">知识图谱</a>
+    </div>
+    <div class="footer-col">
+      <h4>资源</h4>
+      <a href="https://clinicaltrials.gov" target="_blank">ClinicalTrials.gov</a>
+      <a href="https://www.fda.gov" target="_blank">FDA</a>
+      <a href="/about.html">关于本站</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    INNOVATIVE DRUG LEARNING GUIDE · 14 天学习路径 · 投资视角
+  </div>
+</footer>
+
+</body>
+</html>

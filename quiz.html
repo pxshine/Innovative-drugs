@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>互动测验 · 创新药自学指南</title>
+<link rel="stylesheet" href="/assets/style.css">
+<style>
+.quiz-intro {
+  background: var(--bg-card);
+  border: 1px solid var(--rule);
+  padding: 32px 36px;
+  margin-bottom: 40px;
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+.quiz-intro-icon {
+  width: 80px;
+  height: 80px;
+  border: 2px solid var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--serif);
+  font-size: 36px;
+  font-weight: 900;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+.quiz-intro-text h2 {
+  font-family: var(--serif);
+  font-size: 24px;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+.quiz-intro-text p {
+  color: var(--ink-soft);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.quiz-card {
+  background: var(--bg-card);
+  border: 1px solid var(--rule);
+  padding: 36px 40px;
+  margin-bottom: 24px;
+  position: relative;
+}
+.quiz-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--accent);
+}
+.quiz-num {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+.quiz-q {
+  font-family: var(--serif);
+  font-size: 21px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  line-height: 1.5;
+  color: var(--ink);
+}
+.quiz-opts label {
+  display: block;
+  padding: 16px 22px;
+  margin-bottom: 10px;
+  background: var(--bg-paper);
+  border: 1px solid var(--rule);
+  cursor: pointer;
+  font-size: 15px;
+  color: var(--ink-soft);
+  transition: all 0.2s;
+  line-height: 1.6;
+}
+.quiz-opts label:hover {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  color: var(--ink);
+}
+.quiz-opts input { display: none; }
+.quiz-opts label.correct {
+  border-color: #2d7a3e;
+  background: #eaf6ec;
+  color: #1a4d27;
+}
+.quiz-opts label.correct::before {
+  content: '✓ ';
+  color: #2d7a3e;
+  font-weight: 700;
+}
+.quiz-opts label.wrong {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+.quiz-opts label.wrong::before {
+  content: '✗ ';
+  font-weight: 700;
+}
+.quiz-explain {
+  display: none;
+  margin-top: 20px;
+  padding: 20px 24px;
+  background: var(--bg-paper);
+  border-left: 3px solid var(--gold);
+  font-size: 14px;
+  color: var(--ink-soft);
+  line-height: 1.85;
+}
+.quiz-explain.show { display: block; }
+.quiz-explain strong { color: var(--ink); }
+
+#quizResult {
+  text-align: center;
+  margin-top: 60px;
+  padding: 60px 40px;
+  background: var(--bg-card);
+  border: 1px solid var(--rule);
+  display: none;
+}
+#quizResult .score {
+  font-family: var(--serif);
+  font-size: 56px;
+  font-weight: 900;
+  color: var(--accent);
+  margin-bottom: 12px;
+  line-height: 1;
+}
+#quizResult .score-label {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: var(--ink-mute);
+  margin-bottom: 24px;
+}
+#quizResult .msg {
+  font-family: var(--serif);
+  font-size: 20px;
+  color: var(--ink);
+  font-style: italic;
+  margin-bottom: 32px;
+}
+#quizResult .btn {
+  display: inline-block;
+  padding: 14px 36px;
+  background: var(--accent);
+  color: var(--bg-paper);
+  text-decoration: none;
+  font-family: var(--mono);
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border: 1px solid var(--accent);
+  transition: all 0.2s;
+}
+#quizResult .btn:hover {
+  background: transparent;
+  color: var(--accent);
+}
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-brand">
+      <div class="nav-mark">药</div>
+      <div>
+        <div class="nav-title">创新药自学指南</div>
+        <div class="nav-sub">PHARMA · LEARNING</div>
+      </div>
+    </a>
+    <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">菜单</button>
+    <div class="nav-links">
+      <a href="/">首页</a>
+      <a href="/days/">14 天课程</a>
+      <a href="/quiz.html" class="active">互动测验</a>
+      <a href="/illustration.html">知识图谱</a>
+      <a href="/about.html">关于</a>
+    </div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="narrow">
+    <div class="page-eyebrow">SELF-CHECK · 5 QUESTIONS</div>
+    <h1 class="page-title">互动<em>测验</em></h1>
+    <p class="page-subtitle">5 道精选题，检验你的核心知识掌握程度</p>
+  </div>
+</header>
+
+<main class="narrow" style="padding-bottom: 80px;">
+
+  <div class="quiz-intro">
+    <div class="quiz-intro-icon">Q</div>
+    <div class="quiz-intro-text">
+      <h2>测验说明</h2>
+      <p>本测验共 5 题，覆盖创新药研发流程、药物类型、临床数据解读和投资估值方法。每题选择一个最合适的答案，作答后会立即显示正确答案和解析。</p>
+    </div>
+  </div>
+
+  <div id="quizArea"></div>
+
+  <div id="quizResult">
+    <div class="score" id="scoreNum"></div>
+    <div class="score-label">YOUR SCORE</div>
+    <div class="msg" id="scoreMsg"></div>
+    <a href="/days/day-01.html" class="btn">继续 Day 01 学习</a>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">创新药自学指南</div>
+      <div class="footer-tagline">为零基础投资者设计的 14 天学习路径</div>
+    </div>
+    <div class="footer-col">
+      <h4>导航</h4>
+      <a href="/">首页</a>
+      <a href="/days/">14 天课程</a>
+      <a href="/quiz.html">互动测验</a>
+      <a href="/illustration.html">知识图谱</a>
+    </div>
+    <div class="footer-col">
+      <h4>资源</h4>
+      <a href="https://clinicaltrials.gov" target="_blank">ClinicalTrials.gov</a>
+      <a href="https://www.fda.gov" target="_blank">FDA</a>
+      <a href="/about.html">关于本站</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    INNOVATIVE DRUG LEARNING GUIDE · 14 天学习路径 · 投资视角
+  </div>
+</footer>
+
+<script>
+const quizData = [
+  {
+    q: "创新药研发中，哪个临床阶段的淘汰率最高、对投资决策影响最大？",
+    opts: ["I 期临床（安全性验证）", "II 期临床（概念验证）", "III 期临床（大规模确证）", "NDA 审评阶段"],
+    answer: 1,
+    explain: "<strong>II 期临床</strong>是创新药的 \"生死关\"——历史上约 70% 的药物在 II 期失败。II 期数据读出也是 Biotech 股价的最大催化剂之一：成功则股价暴涨，失败则可能腰斩。这是从 \"能否成药\" 到 \"值得大投入\" 的关键转折点。"
+  },
+  {
+    q: "ADC（抗体偶联药物）的核心设计理念是什么？",
+    opts: ["用基因编辑技术修复致病基因", "用抗体精准递送细胞毒素到肿瘤细胞", "用 AI 算法筛选最优化合物", "用免疫检查点抑制剂激活免疫系统"],
+    answer: 1,
+    explain: "ADC 被称为 <strong>\"生物导弹\"</strong>，由三个核心组件构成：抗体（精准识别肿瘤细胞）+ 连接子（控制释放时机）+ 载荷/毒素（杀死肿瘤细胞）。这与免疫疗法（如 PD-1）和基因治疗是完全不同的技术路线。"
+  },
+  {
+    q: "在评估一款肿瘤新药的临床数据时，以下哪个指标被视为 \"金标准\"？",
+    opts: ["ORR（客观缓解率）", "PFS（无进展生存期）", "OS（总生存期）", "DCR（疾病控制率）"],
+    answer: 2,
+    explain: "<strong>OS（总生存期）</strong>衡量的是患者存活的中位时间，是最直接反映治疗获益的指标，被视为金标准。ORR 反映肿瘤缩小比例，PFS 反映疾病不恶化的时间，都很重要但不如 OS 硬。实际中 PFS 常作为替代终点用于加速获批。"
+  },
+  {
+    q: "对于尚无商业化收入的 Biotech 公司，最适用的估值方法是？",
+    opts: ["市盈率（P/E）", "市销率（P/S）", "rNPV（风险调整净现值）", "PEG 比率"],
+    answer: 2,
+    explain: "没有收入的 Biotech 无法用 P/E 或 P/S 估值。<strong>rNPV</strong>（风险调整净现值）将每条管线的潜在收入按临床成功概率和折现率计算为当前价值，是行业标准估值方法。核心变量包括：峰值销售预测、各阶段成功概率、折现率和专利到期时间。"
+  },
+  {
+    q: "以下哪项不属于创新药投资的主要风险？",
+    opts: ["临床试验失败", "原材料价格上涨", "集采/医保谈判降价", "竞品扎堆（Fast-follow 内卷）"],
+    answer: 1,
+    explain: "创新药的核心风险包括：临床失败、政策降价（集采/医保谈判）、竞争内卷、融资稀释和专利悬崖。<strong>原材料成本</strong>虽有影响，但并非创新药投资的主要风险因素——与化工、制造业不同，创新药的核心价值在于知识产权而非原材料。"
+  }
+];
+
+let answered = 0;
+let correct = 0;
+
+function renderQuiz() {
+  const area = document.getElementById('quizArea');
+  quizData.forEach((item, qi) => {
+    const card = document.createElement('div');
+    card.className = 'quiz-card';
+    card.innerHTML = `
+      <div class="quiz-num">QUESTION ${String(qi + 1).padStart(2, '0')} / 05</div>
+      <div class="quiz-q">${item.q}</div>
+      <div class="quiz-opts" id="qopts${qi}">
+        ${item.opts.map((o, oi) => `
+          <label id="ql${qi}_${oi}" onclick="checkAnswer(${qi},${oi})">
+            <input type="radio" name="q${qi}">${o}
+          </label>
+        `).join('')}
+      </div>
+      <div class="quiz-explain" id="qexp${qi}">${item.explain}</div>
+    `;
+    area.appendChild(card);
+  });
+}
+
+function checkAnswer(qi, oi) {
+  const opts = document.getElementById(`qopts${qi}`);
+  if (opts.dataset.done) return;
+  opts.dataset.done = '1';
+  answered++;
+
+  const correctIdx = quizData[qi].answer;
+  document.getElementById(`ql${qi}_${correctIdx}`).classList.add('correct');
+  if (oi === correctIdx) {
+    correct++;
+  } else {
+    document.getElementById(`ql${qi}_${oi}`).classList.add('wrong');
+  }
+  document.getElementById(`qexp${qi}`).classList.add('show');
+
+  if (answered === quizData.length) {
+    setTimeout(() => {
+      const res = document.getElementById('quizResult');
+      res.style.display = 'block';
+      const pct = Math.round(correct / quizData.length * 100);
+      document.getElementById('scoreNum').textContent = `${correct}/${quizData.length}`;
+      const msgs = {
+        100: '完美！你已经掌握了创新药的核心框架。',
+        80: '非常好！核心概念已基本掌握，细节可再巩固。',
+        60: '不错的开始，建议回顾上方内容后再试一次。',
+        0: '建议从头重新阅读各模块内容，打好基础再来挑战。'
+      };
+      const key = pct >= 100 ? 100 : pct >= 80 ? 80 : pct >= 60 ? 60 : 0;
+      document.getElementById('scoreMsg').textContent = msgs[key];
+      res.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 600);
+  }
+}
+
+renderQuiz();
+</script>
+
+</body>
+</html>
